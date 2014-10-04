@@ -1,0 +1,48 @@
+/* login */
+.login {
+border:3pt solid black;
+align:center;
+text-align:center;
+
+}
+
+
+
+/* homepage */
+.navbar1 {     
+border:3pt solid black;
+}
+ul.navbar1 {
+    list-style-type:none;
+}
+ul.navbar1 li {
+    display: inline;
+}
+
+
+.picture {
+ border:3pt solid black;   
+}
+
+.picture2 {
+ border:3pt solid black; 
+ width: 100%; 
+ height: 200px;
+}
+
+.navbar2 {    
+    border:3pt solid black;
+    align:left;
+    width:100pt;
+}
+
+.main {
+   border:3pt solid black; 
+   position:relative;
+   left:200pt;
+   height:200px;
+}
+
+.foot {
+   border:3pt solid black; 
+}
