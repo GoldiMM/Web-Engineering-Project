@@ -78,13 +78,14 @@ p {
 }
 
 .navbar1 {     
-    border:5pt solid black;
+    list-style-type:none;
     position:fixed;
     width:60%;
     left:25%;
     top:2%;
     margin:5pt;
     padding:5pt;
+    
 }
 
 .navbar1 ul {
@@ -92,6 +93,7 @@ p {
     list-style-image:none;
     margin:0px;
     padding:0px;
+    
    
 }
 
@@ -99,11 +101,12 @@ p {
     float:left;
     border: solid 3pt;
     width:24%;
+    font-size:18pt;
 }
 
 .topmenu a {
     float:left;
-    width:110px;
+    width:100%;
     text-align:center;
 }
 
@@ -123,9 +126,10 @@ p {
 }
 
 .submenu a{
-    font-size:12px;
-    width:110px;
+    font-size:12pt;
+    width:100%;
     position:relative;
+    text-align:center;
     clear:both; /* special IE6 */
 }
 
@@ -138,6 +142,10 @@ p {
     display:block;  
     z-index:500;
 }
+
+
+
+
 
 .picture2 {
     border:3pt solid red; 
