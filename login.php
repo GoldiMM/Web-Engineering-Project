@@ -1,3 +1,13 @@
+<?php
+       session_start();
+        // Session löschen
+        session_unset();
+        session_destroy();
+        //Session-Array wird gelöscht
+        unset($_SESSION);
+        ?>
+
+
 <html>
     <head>
         <link rel="stylesheet" href="mycss.css" type="text/css">
@@ -7,11 +17,12 @@
     </head>
     
     <body>
-       <?php
+             
       
        
-       ?>
+       
         <div class ="login" >
+            <form action="homepage.php" method="GET">
             <h1> Online-Verwaltungstool f&uuml;r Mehrfamilienhaus </h1>
             <img src="house.jpg" class="picture1"> <br/> 
             <p>
@@ -30,7 +41,8 @@
                 <tr>
                     <td colspan="2" align="right"> <input type="submit" value="Login"> </td>
                 </tr>
-            </table>   
+            </table>
+            </form>
         </p>
         </div>
         
