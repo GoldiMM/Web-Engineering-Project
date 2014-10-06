@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
 
 ?>
 <html>
@@ -10,6 +10,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body class="content">
+        <?php
+        if (isset($_GET['nickname']) AND isset($_GET['password'])) {
+            if($_GET['nickname']=="admin" AND
+                    $_GET['password']=="root")
+            {
+                $_SESSION['eingeloggt']=true;
+                echo "<br/><a href=\"homepage.php\"> Hallo MR. X</a>";
+            }
+            else{
+                $_SESSION['eingeloggt']=false;
+                header("Location:login.php");
+            }
+        }
+        
+        ?>
 
         
         <ul class="navbar1">
