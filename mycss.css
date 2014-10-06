@@ -6,50 +6,80 @@ h1 {
   font-family:calibri;
   font-size: 30pt;
   font-weight:bold;
+  margin-top:auto;
+  margin-bottom:30pt;
+  padding:auto;
+}
+
+h2 {
+  font-family:calibri;
+  font-size: 15pt;
+  font-weight:bold;
+  margin:auto;
+  padding:auto;
+}
+
+p {
+    font-size:12pt;
+    font-family:calibri;
 }
 
 /* login */
 
 .login {
-widht:100%;
-border:3pt solid black; 
-align:center;
+border:5pt solid yellow; 
+border-radius:25px;
+background-color: #CCCCFF;
+float: none;
+margin: 0 auto;
+height:90%;
+width:75%;
 text-align:center;
 padding:20pt;
-position: absolute;
-top:3%;
-left:22%;
-background-color: #CCCCFF;
 }
 
-.login p{
-    font-size:20pt;
-    font-family:calibri;
-    
+.login table{
+ border: 3pt solid yellow;
+ padding:auto;
+ margin:auto; 
 }
 
-
-
-/* homepage */
-.navbar1 {     
-border:3pt solid black;
-}
-ul.navbar1 {
-    list-style-type:none;
-}
-ul.navbar1 li {
-    display: inline;
+.login td, tr {
+    margin:auto;
+    padding:auto;  
 }
 
-
-.picture {
- border:3pt solid black;   
+.login th {
+    color: black;
+    background-color: yellow;    
+    margin:10pt;
+    padding:5pt;
 }
 
 .picture2 {
  border:3pt solid black; 
- width: 80%; 
- height: 50%;
+ height:50%;
+ width:50%;
+ float: none;
+ margin-top:auto;
+ margin-bottom:20pt;
+}
+
+/* homepage */
+.navbar1 {     
+border:2pt solid black;
+}
+
+ul.navbar1 {
+    list-style-type:none;
+}
+
+ul.navbar1 li {
+    display: inline;
+}
+
+.picture {
+ border:3pt solid black;   
 }
 
 .navbar2 {    
