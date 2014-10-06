@@ -99,9 +99,9 @@ p {
 
 .navbar1 li.topmenu {
     float:left;
-    border: solid 3pt;
     width:24%;
     font-size:18pt;
+    
 }
 
 .topmenu a {
@@ -117,7 +117,7 @@ p {
 .topmenu a, .submenu a{
     padding:1px 5px;
     border:1px solid yellow;
-    border-collapse:collapse;
+    
     color:black;
     font-weight:bold;
     text-decoration:none;
