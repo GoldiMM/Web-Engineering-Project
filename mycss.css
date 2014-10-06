@@ -1,22 +1,22 @@
 html {
-  background-color: navy;  
+    background-color: navy;  
 }
 
 h1 {
-  font-family:calibri;
-  font-size: 30pt;
-  font-weight:bold;
-  margin-top:auto;
-  margin-bottom:30pt;
-  padding:auto;
+    font-family:calibri;
+    font-size: 30pt;
+    font-weight:bold;
+    margin-top:auto;
+    margin-bottom:30pt;
+    padding:auto;
 }
 
 h2 {
-  font-family:calibri;
-  font-size: 15pt;
-  font-weight:bold;
-  margin:auto;
-  padding:auto;
+    font-family:calibri;
+    font-size: 15pt;
+    font-weight:bold;
+    margin:auto;
+    padding:auto;
 }
 
 p {
@@ -27,21 +27,21 @@ p {
 /* login */
 
 .login {
-border:5pt solid yellow; 
-border-radius:25px;
-background-color: #CCCCFF;
-float: none;
-margin: 0 auto;
-height:90%;
-width:75%;
-text-align:center;
-padding:20pt;
+    border:5pt solid yellow; 
+    border-radius:25px;
+    background-color: #CCCCFF;
+    float: none;
+    margin: 0 auto;
+    height:90%;
+    width:75%;
+    text-align:center;
+    padding:20pt;
 }
 
 .login table{
- border: 3pt solid yellow;
- padding:auto;
- margin:auto; 
+    border: 3pt solid yellow;
+    padding:auto;
+    margin:auto; 
 }
 
 .login td, tr {
@@ -57,32 +57,32 @@ padding:20pt;
 }
 
 .picture1 {
- border:3pt solid black; 
- height:50%;
- width:50%;
- float: none;
- margin-top:auto;
- margin-bottom:20pt;
+    border:3pt solid black; 
+    height:50%;
+    width:50%;
+    float: none;
+    margin-top:auto;
+    margin-bottom:20pt;
 }
 
 /* homepage */
 .content {
-border:5pt solid yellow; 
-border-radius:25px;
-background-color: #CCCCFF;
-float: none;
-margin: 0 auto;
-height:90%;
-width:75%;
-padding:20pt;
+    border:5pt solid yellow; 
+    border-radius:25px;
+    background-color: #CCCCFF;
+    float: none;
+    margin: 0 auto;
+    height:90%;
+    width:75%;
+    padding:20pt;
 }
 
 .navbar1 {     
-border:5pt solid black;
-width:75%;
-float:right;
-margin:auto;
-padding:auto;
+    border:5pt solid black;
+    width:75%;
+    float:right;
+    margin:5pt;
+    padding:5pt;
 }
 
 .navbar1 ul {
@@ -93,54 +93,56 @@ padding:auto;
 }
 
 .navbar1 li.topmenu {
-  float:left;
+    float:left;
+    border: solid 3pt;
 }
 
 .topmenu a {
-  float:left;
-  width:110px;
-  text-align:center;
+    float:left;
+    width:110px;
+    text-align:center;
 }
 
 .topmenu ul{
-  display:none;
+    display:none;
 }
 
 .topmenu a, .submenu a{
-  padding:1px 5px;
-  border:1px solid yellow;
-  border-collapse:collapse;
-  color:black;
-  font-weight:bold;
-  text-decoration:none;
-  background-color:yellow;
-  margin:0;  
+    padding:1px 5px;
+    border:1px solid yellow;
+    border-collapse:collapse;
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+    background-color:yellow;
+    margin:0;  
 }
 
 .submenu a{
-  font-size:12px;
-  width:110px;
-  position:relative;
-  clear:both; /* special IE6 */
+    font-size:12px;
+    width:110px;
+    position:relative;
+    clear:both; /* special IE6 */
 }
 
 .navbar1 a:hover, .topmenu.on a {
-  color:#4C4C4C;
-  background-color:#ffddbb !important;
+    color:#4C4C4C;
+    background-color:#ffddbb !important;
 }
 
 .topmenu:hover ul {
-  display:block;  
-  z-index:500;
+    display:block;  
+    z-index:500;
 }
 
 .picture2 {
- border:3pt solid black; 
- height:20%;
- width:100%;
- float: none;
- margin-top:0pt;
- margin-bottom:20pt;
+    border:3pt solid red; 
+    height:20%;
+    width:100%;
+    float: none;
+    
+    margin-top:15pt;
+    margin-bottom:20pt;
 }
 
 .navbar2 {    
@@ -152,18 +154,18 @@ padding:auto;
 }
 
 .main {
-   border:3pt solid black; 
-   float:none;
-   margin-top:0pt;
-   margin-left:20%;
-   padding:auto;
-   widht:100%;
-   height:100%;
+    border:3pt solid black; 
+    float:none;
+    margin-top:0pt;
+    margin-left:20%;
+    padding:auto;
+    widht:100%;
+    height:100%;
 }
 
 .foot {
-   border:3pt solid red;
-   float:none;
-   margin-top:auto;
-   padding:auto;
+    border:3pt solid red;
+    float:none;
+    margin-top:auto;
+    padding:auto;
 }
