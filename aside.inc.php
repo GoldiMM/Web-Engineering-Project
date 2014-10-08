@@ -6,18 +6,18 @@ Die Menupunkte heissen jeweils option1, option2, usw.
 
 echo '
     <aside>
-<table border="1" bgcolor="yellow">
+<table border="5" cellspacing="9pt" cellpadding="5pt" bgcolor="yellow" class="navbar2">
 <tr>
-<td id="option1" onmouseover="angewaehlt2(1)" onmouseout="weg2(1)"> <a href="#"> &nbsp;&nbsp;&nbsp; Option1 &nbsp;&nbsp;&nbsp; </a> </td>
+<td id="option1" onmouseover="angewaehlt2(1)" onmouseout="weg2(1)"> <a href="#">  Benutzer erfassen </a> </td>
 </tr>
 <tr>
-<td id="option2" onmouseover="angewaehlt2(2)" onmouseout="weg2(2)"> <a href="#"> &nbsp;&nbsp;&nbsp; Option2 &nbsp;&nbsp;&nbsp; </a> </td>
+<td id="option2" onmouseover="angewaehlt2(2)" onmouseout="weg2(2)"> <a href="#"> Option2 </a> </td>
 </tr>
 <tr>
-<td id="option3" onmouseover="angewaehlt2(3)" onmouseout="weg2(3)"> <a href="#">&nbsp;&nbsp;&nbsp; Option3 &nbsp;&nbsp;&nbsp; </a></td>
+<td id="option3" onmouseover="angewaehlt2(3)" onmouseout="weg2(3)"> <a href="#"> Option3 </a></td>
 </tr>
 <tr>
-<td id="option4" onmouseover="angewaehlt2(4)" onmouseout="weg2(4)"> <a href="#">&nbsp;&nbsp;&nbsp; Option4 &nbsp;&nbsp;&nbsp;</a> </td>
+<td id="option4" onmouseover="angewaehlt2(4)" onmouseout="weg2(4)"> <a href="#"> Option4 </a> </td>
 </tr>
 </table>
 </aside>
