@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title></title>
+        <title>Online-Verwaltungstool f&uuml;r Mehrfamilienhaus</title>
+        <link rel="stylesheet" href="mycss.css" type="text/css">   
     </head>
+
     <body>
         <?php
-        echo "Hallo";
-        echo "Hallo Fabio";
-        echo "blup";
-        echo "cheerio"
-        ?>
+        include('header.inc.php');
+        include('nav.inc.php');
+        include('aside.inc.php');
+        include('article.inc.php');
+        include('section.inc.php');
+        include('footer.inc.php');
+        ?>        
+
     </body>
 </html>
+
+        
+        
+                
