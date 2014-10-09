@@ -22,11 +22,13 @@ h2 {
 header {
     font-size: 14pt;
     text-align:right;
+    margin-right:10pt;
 }
 
 nav {
     margin-top:10pt;
     margin-bottom:10pt;
+    margin-right:10pt;
 }
     
 aside {
@@ -35,9 +37,10 @@ aside {
 }
 
 article {
-    font-size: 20pt;
-    border:3pt solid red;
+    border:5pt solid red;
+    font-size: 12pt;
     margin-left:15%;
+    margin-right:2pt;
 }
 
 section {
@@ -47,6 +50,7 @@ section {
 footer {
     font-size: 8pt;
     text-align: right;
+    margin-right:2pt;
 } 
 
 a {
@@ -58,7 +62,7 @@ a {
 
 /* Sonstige-Tags */
 .picture2 {
-    border:3pt solid red; 
+    border:4pt solid red; 
     height:20%;
     width:100%;
 }
