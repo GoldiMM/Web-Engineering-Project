@@ -61,6 +61,11 @@ a {
 
 
 /* Sonstige-Tags */
+.log {
+    align:center;
+}
+
+
 .picture2 {
     border:4pt solid red; 
     height:20%;
