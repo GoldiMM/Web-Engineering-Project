@@ -23,10 +23,31 @@ session_destroy();
     <head>
         <title>Online-Verwaltungstool</title> 
         <link rel="stylesheet" href="mycss.css" type="text/css">  
+        
+      <script type="text/javascript">
+            <!--
+    
+    function checkLogin() {
+        var laenge = document.formLogin.password.value.length;
+      
+    if (laenge < 6 ) {
+     alert("ACHTUNG ihr Passowrt muss mindestens 6 Zeichen haben!");
+     document.formLogin.password.focus();
+     return false;
+    }
+    
+    }
+    </script>
+        
+    <noscript>
+    Sie haben JavaScript deaktiviert. Bitte aktivieren Sie JavaScript.
+    </noscript>
+    
     </head>
 
     <body>
-        <form action="homepage.php" method="POST">
+        <form name="formLogin" onsubmit="return checkLogin()" action="homepage.php" method="POST">
+            
             <header> 
                 <p>
                     Benutzername <input name="nickname" type="text" size="15"> 
@@ -52,7 +73,7 @@ session_destroy();
             <?php
             include('footer.inc.php');
             ?>        
-
-        </form>
+            </form>
+       
     <body>
 </html>

@@ -4,7 +4,7 @@
 session_start();
 
 if (isset($_POST['nickname']) AND isset($_POST['password'])) {
-    if ($_POST['nickname'] == "admin" AND $_POST['password'] == "root") {
+    if ($_POST['nickname'] == "admin" AND $_POST['password'] == "root1234") {
         // zwei Session-Variablen setzen
         $_SESSION['nickname'] = $_POST['nickname'];
         $_SESSION['eingeloggt'] = true;
