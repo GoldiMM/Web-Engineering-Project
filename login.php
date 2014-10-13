@@ -1,3 +1,4 @@
+<!-- PHP -->
 <?php
 //Eine Session starten
 session_start();
@@ -18,20 +19,20 @@ if (ini_get("session.use_cookies")) {
 session_destroy();
 ?>
 
-<!-- Login-Page -->
+<!-- HTML - Login-Page -->
 <html>
     <head>
         <title>Online-Verwaltungstool</title> 
         <link rel="stylesheet" href="mycss.css" type="text/css">  
         
+        <!-- Java-Script -->
       <script type="text/javascript">
             <!--
-    
     function checkLogin() {
         var laenge = document.formLogin.password.value.length;
       
     if (laenge < 6 ) {
-     alert("ACHTUNG ihr Passowrt muss mindestens 6 Zeichen haben!");
+     alert("ACHTUNG: Ihr Passowrt muss mindestens 6 Zeichen haben!");
      document.formLogin.password.focus();
      return false;
     }
@@ -46,6 +47,7 @@ session_destroy();
     </head>
 
     <body>
+       
         <form name="formLogin" onsubmit="return checkLogin()" action="homepage.php" method="POST">
             
             <header> 

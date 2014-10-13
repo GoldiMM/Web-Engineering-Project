@@ -1,5 +1,5 @@
+<!-- PHP -->
 <?php
-
 // vorhandene Session aufnehmen
 session_start();
 
@@ -10,7 +10,8 @@ if (isset($_POST['nickname']) AND isset($_POST['password'])) {
         $_SESSION['eingeloggt'] = true;
 
         echo '
-  <!-- Home-Page -->
+  
+  <!-- HTML -->
   <html>
   <head> 
   <title> Online-Verwaltungstool </title>
@@ -20,12 +21,11 @@ if (isset($_POST['nickname']) AND isset($_POST['password'])) {
         //Nickname zwischenspeichern
         $nick = $_POST['nickname'];
 
-
         echo "
       <form action=\"login.php\" method=\"POST\">
       <body>
   <header> 
-  <p> Sie sind eingeloggt als $nick 
+  <p> Sie sind eingeloggt als <b> $nick </b> 
   <input type=\"submit\" value=\"Logout\">
   </p>
   <img class=\"picture2\" src=\"house2.jpg\" > 
@@ -33,21 +33,31 @@ if (isset($_POST['nickname']) AND isset($_POST['password'])) {
 ";
 
         include('nav.inc.php');
-        include('aside.inc.php');
 
-        echo '
+        echo "
+<aside>&nbsp; </aside>            
+
 <article>
 
-<p> Hier kommen die Ausfuehrungen mit Formularen usw. !!!
+<p> Hallo <b> $nick </b> <br/> 
+Herzlich Willkommen auf Deinem eigenen Online-Verwaltungstool f&uuml;r Mehrfamilienh&auml;user. <br/>
+<br/>
+Bitte bediene das Navigationsmen&uuml;, um Deine Vermieter und Liegenschaften zu verwalten<br/>
+Hier eine kleine Auflistung der wichtigsten Men&uuml;punkte:
+<br/> 
+<br/>
+<b> Menupunkt1 </b> <br/>
+(kurze Erklarung)
 <br/>
 <br/>
+<b> Menupunkt2 </b> <br/>
+(kurze Erklarung) <br/>
 <br/>
-<br/>
-<br/>
-<br/>
+usw.
 
+</p>
 </article>
-';
+";
 
         include('footer.inc.php');
 
@@ -56,6 +66,8 @@ if (isset($_POST['nickname']) AND isset($_POST['password'])) {
 </body>
 </html> 
   ";
+
+        //Falls Passwort ungültig ist
     } else {
         echo "ung&uuml;ltige Eingabe!";
         $_SESSION['eingeloggt'] = false;
