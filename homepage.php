@@ -2,6 +2,8 @@
 <?php
 // vorhandene Session aufnehmen
 session_start();
+//Nickname zwischenspeichern
+$nick = $_POST['nickname'];
 
 if (isset($_POST['nickname']) AND isset($_POST['password'])) {
     if ($_POST['nickname'] == "admin" AND $_POST['password'] == "root1234") {
@@ -9,19 +11,24 @@ if (isset($_POST['nickname']) AND isset($_POST['password'])) {
         $_SESSION['nickname'] = $_POST['nickname'];
         $_SESSION['eingeloggt'] = true;
 
-        echo '
+        //Falls Passwort ungültig ist
+    } else {
+        echo "ung&uuml;ltige Eingabe!";
+        $_SESSION['eingeloggt'] = false;
+        echo "<a href=\"login.php\"> zur&uuml;ck zur Login-Seite </a>";
+    }
+}
+
+
+ echo "
   
   <!-- HTML -->
   <html>
   <head> 
   <title> Online-Verwaltungstool </title>
-  <link rel="stylesheet" href="mycss.css" type="text/css">  
+  <link rel=\"stylesheet\" href=\"mycss.css\" type=\"text/css\">  
   </head>
-  ';
-        //Nickname zwischenspeichern
-        $nick = $_POST['nickname'];
-
-        echo "
+        
       <form action=\"login.php\" method=\"POST\">
       <body>
   <header> 
@@ -67,11 +74,4 @@ usw.
 </html> 
   ";
 
-        //Falls Passwort ungültig ist
-    } else {
-        echo "ung&uuml;ltige Eingabe!";
-        $_SESSION['eingeloggt'] = false;
-        echo "<a href=\"login.php\"> zur&uuml;ck zur Login-Seite </a>";
-    }
-}
 ?>
