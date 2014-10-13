@@ -2,14 +2,16 @@
 <?php
 // vorhandene Session aufnehmen
 session_start();
-//Nickname zwischenspeichern
-$nick = $_POST['nickname'];
+
 
 if (isset($_POST['nickname']) AND isset($_POST['password'])) {
     if ($_POST['nickname'] == "admin" AND $_POST['password'] == "root1234") {
         // zwei Session-Variablen setzen
         $_SESSION['nickname'] = $_POST['nickname'];
         $_SESSION['eingeloggt'] = true;
+        //Nickname zwischenspeichern
+         $nick[1] = $_POST['nickname'];   
+                       
 
         //Falls Passwort ungültig ist
     } else {
@@ -32,7 +34,7 @@ if (isset($_POST['nickname']) AND isset($_POST['password'])) {
       <form action=\"login.php\" method=\"POST\">
       <body>
   <header> 
-  <p> Sie sind eingeloggt als <b> $nick </b> 
+  <p> Sie sind eingeloggt als <b> $nick[1] </b> 
   <input type=\"submit\" value=\"Logout\">
   </p>
   <img class=\"picture2\" src=\"house2.jpg\" > 
@@ -46,7 +48,7 @@ if (isset($_POST['nickname']) AND isset($_POST['password'])) {
 
 <article>
 
-<p> Hallo <b> $nick </b> <br/> 
+<p> Hallo <b> $nick[1] </b> <br/> 
 Herzlich Willkommen auf Deinem eigenen Online-Verwaltungstool f&uuml;r Mehrfamilienh&auml;user. <br/>
 <br/>
 Bitte bediene das Navigationsmen&uuml;, um Deine Vermieter und Liegenschaften zu verwalten<br/>
