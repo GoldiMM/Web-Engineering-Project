@@ -10,7 +10,7 @@ if (isset($_POST['nickname']) AND isset($_POST['password'])) {
         $_SESSION['nickname'] = $_POST['nickname'];
         $_SESSION['eingeloggt'] = true;
         //Nickname zwischenspeichern
-         $nick[1] = $_POST['nickname'];   
+         //$nick = $_POST['nickname'];   
                        
 
         //Falls Passwort ungültig ist
@@ -31,10 +31,10 @@ if (isset($_POST['nickname']) AND isset($_POST['password'])) {
   <link rel=\"stylesheet\" href=\"mycss.css\" type=\"text/css\">  
   </head>
         
-      <form action=\"login.php\" method=\"POST\">
       <body>
+      <form action=\"login.php\" method=\"POST\">
   <header> 
-  <p> Sie sind eingeloggt als <b> $nick[1] </b> 
+  <p> Sie sind eingeloggt als <b> $_SESSION[nickname] </b> 
   <input type=\"submit\" value=\"Logout\">
   </p>
   <img class=\"picture2\" src=\"house2.jpg\" > 
@@ -48,7 +48,7 @@ if (isset($_POST['nickname']) AND isset($_POST['password'])) {
 
 <article>
 
-<p> Hallo <b> $nick[1] </b> <br/> 
+<p> Hallo <b> $_SESSION[nickname] </b> <br/> 
 Herzlich Willkommen auf Deinem eigenen Online-Verwaltungstool f&uuml;r Mehrfamilienh&auml;user. <br/>
 <br/>
 Bitte bediene das Navigationsmen&uuml;, um Deine Vermieter und Liegenschaften zu verwalten<br/>
@@ -71,7 +71,7 @@ usw.
         include('footer.inc.php');
 
         echo "
-    </form>
+   </form>
 </body>
 </html> 
   ";
