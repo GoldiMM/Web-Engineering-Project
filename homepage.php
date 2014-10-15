@@ -3,14 +3,11 @@
 // vorhandene Session aufnehmen
 session_start();
 
-
 if (isset($_POST['nickname']) AND isset($_POST['password'])) {
     if ($_POST['nickname'] == "admin" AND $_POST['password'] == "root1234") {
         // zwei Session-Variablen setzen
         $_SESSION['nickname'] = $_POST['nickname'];
         $_SESSION['eingeloggt'] = true;
-        //Nickname zwischenspeichern
-         //$nick = $_POST['nickname'];   
                        
 
         //Falls Passwort ungültig ist
@@ -21,7 +18,8 @@ if (isset($_POST['nickname']) AND isset($_POST['password'])) {
     }
 }
 
-
+//sofern der Benutzer eingeloggt ist
+if ($_SESSION['eingeloggt']==true) {
  echo "
   
   <!-- HTML -->
@@ -75,5 +73,6 @@ usw.
 </body>
 </html> 
   ";
+} 
 
 ?>
