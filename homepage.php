@@ -2,8 +2,11 @@
 <?php
 // vorhandene Session aufnehmen
 session_start();
+// Verbindung zur Datenbank aufbauen
+include('db.inc.php');
 
 if (isset($_POST['nickname']) AND isset($_POST['password'])) {
+    //
     if ($_POST['nickname'] == "admin" AND $_POST['password'] == "root1234") {
         // zwei Session-Variablen setzen
         $_SESSION['nickname'] = $_POST['nickname'];
@@ -30,7 +33,7 @@ if ($_SESSION['eingeloggt']==true) {
   </head>
         
       <body>
-      <form action=\"login.php\" method=\"POST\">
+      <form action=\"index.php\" method=\"POST\">
   <header> 
   <p> Sie sind eingeloggt als <b> $_SESSION[nickname] </b> 
   <input type=\"submit\" value=\"Logout\">
