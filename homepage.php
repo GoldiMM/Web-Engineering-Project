@@ -26,56 +26,54 @@ if ($_SESSION['eingeloggt']==true) {
  echo "
   
   <!-- HTML -->
-  <html>
-  <head> 
-  <title> Online-Verwaltungstool </title>
-  <link rel=\"stylesheet\" href=\"mycss.css\" type=\"text/css\">  
-  </head>
-        
+    <html>
+      <head> 
+        <title> Online-Verwaltungstool </title>
+        <link rel=\"stylesheet\" href=\"mycss.css\" type=\"text/css\">  
+      </head>
+            
       <body>
-      <form action=\"index.php\" method=\"POST\">
-  <header> 
-  <p> Sie sind eingeloggt als <b> $_SESSION[nickname] </b> 
-  <input type=\"submit\" value=\"Logout\">
-  </p>
-  <img class=\"picture2\" src=\"house2.jpg\" > 
-  </header>
-";
+        <form action=\"index.php\" method=\"POST\">
+          <header> 
+              <p> Sie sind eingeloggt als <b> $_SESSION[nickname] </b> 
+                <input type=\"submit\" value=\"Logout\">
+              </p>
+            <img class=\"picture2\" src=\"house2.jpg\" > 
+          </header>
+        ";
 
-        include('nav.inc.php');
+  include('nav.inc.php');
 
-        echo "
-<aside>&nbsp; </aside>            
-
-<article>
-
-<p> Hallo <b> $_SESSION[nickname] </b> <br/> 
-Herzlich Willkommen auf Deinem eigenen Online-Verwaltungstool f&uuml;r Mehrfamilienh&auml;user. <br/>
-<br/>
-Bitte bediene das Navigationsmen&uuml;, um Deine Vermieter und Liegenschaften zu verwalten<br/>
-Hier eine kleine Auflistung der wichtigsten Men&uuml;punkte:
-<br/> 
-<br/>
-<b> Menupunkt1 </b> <br/>
-(kurze Erklarung)
-<br/>
-<br/>
-<b> Menupunkt2 </b> <br/>
-(kurze Erklarung) <br/>
-<br/>
-usw.
-
-</p>
-</article>
-";
-
-        include('footer.inc.php');
-
-        echo "
-   </form>
-</body>
-</html> 
+  echo "<aside>&nbsp; </aside>            
+    <article>
+      <p> 
+        Hallo <b> $_SESSION[nickname] </b> <br/> 
+        Herzlich Willkommen auf Deinem eigenen Online-Verwaltungstool f&uuml;r Mehrfamilienh&auml;user. <br/>
+      <br/>
+        Bitte bediene das Navigationsmen&uuml;, um Deine Vermieter und Liegenschaften zu verwalten<br/>
+        Hier eine kleine Auflistung der wichtigsten Men&uuml;punkte:
+      <br/> 
+      <br/>
+      <b> Menupunkt1 </b> <br/>
+        (kurze Erklarung)
+      <br/>
+      <br/>
+        <b> Menupunkt2 </b> <br/>
+        (kurze Erklarung) <br/>
+      <br/>
+      usw.
+      </p>
+    </article> 
   ";
-} 
 
+
+
+  include('footer.inc.php');
+
+  echo "
+      </form>
+      </body>
+      </html> 
+  ";
+  } 
 ?>

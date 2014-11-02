@@ -1,23 +1,24 @@
 <!-- PHP -->
 <?php
-//Eine Session starten
-session_start();
+   //Eine Session starten
+    session_start();
 
-// Löschen aller Session-Variablen, somit können wir ein 
-// Logout auf diese Seite lenken
-$_SESSION = array();
+    // Löschen aller Session-Variablen, somit können wir ein 
+    // Logout auf diese Seite lenken
+    $_SESSION = array();
 
-// Falls die Session gelöscht werden soll, löschen Sie auch das Session-Cookie.
-// Achtung: Damit wird die Session gelöscht, nicht nur die Session-Daten!
-if (ini_get("session.use_cookies")) {
-    $params = session_get_cookie_params();
-    setcookie(session_name(), '', time() - 42000, $params["path"], $params["domain"], $params["secure"], $params["httponly"]
-    );
-}
+    // Falls die Session gelöscht werden soll, löschen Sie auch das Session-Cookie.
+    // Achtung: Damit wird die Session gelöscht, nicht nur die Session-Daten!
+    if (ini_get("session.use_cookies")) {
+        $params = session_get_cookie_params();
+        setcookie(session_name(), '', time() - 42000, $params["path"], $params["domain"], $params["secure"], $params["httponly"]
+        );
+    }
 
-// Zum Schluß, löschen aller Daten der Session.
-session_destroy();
+    // Zum Schluß, löschen aller Daten der Session.
+    session_destroy();
 ?>
+
 
 <!-- HTML - Login-Page -->
 <html>
@@ -26,37 +27,33 @@ session_destroy();
         <link rel="stylesheet" href="mycss.css" type="text/css">  
         
         <!-- Java-Script -->
-      <script type="text/javascript">
+        <script type="text/javascript">
             <!--
-    function checkLogin() {
-        var laenge = document.formLogin.password.value.length;
-      
-    if (laenge < 6 ) {
-     alert("ACHTUNG: Ihr Passwort muss mindestens 6 Zeichen haben!");
-     document.formLogin.password.focus();
-     return false;
-    }
-    
-    if (laenge > 32) {
-        alert("ACHTUNG: Ihr Passwort ist zu lang!");
-        document.formLogin.password.focus();
-        return false;
+                function checkLogin() {
+                        var laenge = document.formLogin.password.value.length;
+                      
+                    if (laenge < 6 ) {
+                        alert("ACHTUNG: Ihr Passwort muss mindestens 6 Zeichen haben!");
+                        document.formLogin.password.focus();
+                        return false;
+                    }
+                    
+                    if (laenge > 32) {
+                        alert("ACHTUNG: Ihr Passwort ist zu lang!");
+                        document.formLogin.password.focus();
+                        return false;   
+                    }    
+                }
+        </script>
         
-        }
-    
-    }
-    </script>
-        
-    <noscript>
-    Sie haben JavaScript deaktiviert. Bitte aktivieren Sie JavaScript.
-    </noscript>
+        <noscript>
+                 Sie haben JavaScript deaktiviert. Bitte aktivieren Sie JavaScript.
+         </noscript>
     
     </head>
 
     <body>
-       
         <form name="formLogin" onsubmit="return checkLogin()" action="homepage.php" method="POST">
-            
             <header> 
                 <p>
                     Benutzername <input name="nickname" type="text" size="15"> 
@@ -64,13 +61,10 @@ session_destroy();
                     <input type="submit" value="Login">
                 </p> 
                 <img class="picture2" src="house2.jpg" > 
-
             </header>
 
             <nav> &nbsp; </nav>
-
             <aside> &nbsp; </aside>
-
             <article>
 
                 <h1 align="center"> Herzlich Willkommen auf der Seite Online-Verwaltungstool f&uuml;r Mehrfamilienhaus </h1>
@@ -80,11 +74,10 @@ session_destroy();
             </article>
 
             <?php
-            include('footer.inc.php');
-            ?>        
-            </form>
-       
-    <body>
+                    include('footer.inc.php');
+             ?>        
+        </form> 
+    </body>
 </html>
 
         
