@@ -8,6 +8,7 @@ body{
 }
 
 p   {    
+     
 }
 
 h1  {
@@ -41,7 +42,7 @@ article {
     border-radius:25px;
     padding-left:15pt;
     padding-right:15pt;
-    background-color: #CCCCFF;
+    background-color: #CCCCFF; 
 }
 
 section {

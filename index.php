@@ -19,8 +19,7 @@
     session_destroy();
 ?>
 
-
-<!-- HTML - Login-Page -->
+<!-- HTML - index ist die Login-Page -->
 <html>
     <head>
         <title>Online-Verwaltungstool</title> 
@@ -48,34 +47,27 @@
         
         <noscript>
                  Sie haben JavaScript deaktiviert. Bitte aktivieren Sie JavaScript.
-         </noscript>
+        </noscript>
     
     </head>
 
     <body>
         <form name="formLogin" onsubmit="return checkLogin()" action="homepage.php" method="POST">
-            <header> 
-                <p>
-                    Benutzername <input name="nickname" type="text" size="15"> 
-                    Passwort: <input name="password" type="password" size="15"> 
-                    <input type="submit" value="Login">
-                </p> 
-                <img class="picture2" src="house2.jpg" > 
-            </header>
-
+            <?php
+            include('index.header.inc.php');
+            ?>
+            
             <nav> &nbsp; </nav>
+            
             <aside> &nbsp; </aside>
-            <article>
-
-                <h1 align="center"> Herzlich Willkommen auf der Seite Online-Verwaltungstool f&uuml;r Mehrfamilienhaus </h1>
-                <p align="center"> <img  src="house.jpg" align="center"> <br/>
-                    Bitte loggen Sie sich oben rechts ein! </p>
-
-            </article>
+            
+            <?php
+            include('index.article.inc.php');
+            ?>
 
             <?php
-                    include('footer.inc.php');
-             ?>        
+            include('index.footer.inc.php');
+            ?>        
         </form> 
     </body>
 </html>
