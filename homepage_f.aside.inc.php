@@ -1,5 +1,5 @@
 <!-- 
-In dieser Klasse wird die Navigationsbar an der linken Seite gesteuert von der Seite homepage_b
+In dieser Klasse wird die Navigationsbar an der linken Seite gesteuert von der Seite homepage_f
 Die Menupunkte heissen jeweils option1, option2, usw.
 ---->
 <?php
@@ -8,16 +8,19 @@ echo "
 <aside>
     <table border=\"5\" cellspacing=\"9pt\" cellpadding=\"5pt\" bgcolor=\"yellow\" class=\"navbar2\">
         <tr>
-            <td id=\"option1\" onmouseover=\"angewaehlt2(1)\" onmouseout=\"weg2(1)\"> <a href=\"#\">  Mieter erfassen </a> </td>
+            <td id=\"option1\" onmouseover=\"angewaehlt2(1)\" onmouseout=\"weg2(1)\"> <a href=\"homepage_f_a.php\">  &Uuml;bersicht der Benutzer  </a> </td>
         </tr>
         <tr>
-            <td id=\"option2\" onmouseover=\"angewaehlt2(2)\" onmouseout=\"weg2(2)\"> <a href=\"#\"> Mieterspiegel </a> </td>
+            <td id=\"option2\" onmouseover=\"angewaehlt2(2)\" onmouseout=\"weg2(2)\"> <a href=\"homepage_f_b.php\"> Neuer Benutzer erfassen </a> </td>
         </tr>
         <tr>
-            <td id=\"option3\" onmouseover=\"angewaehlt2(3)\" onmouseout=\"weg2(3)\"> <a href=\"#\"> Option3 </a></td>
+            <td id=\"option3\" onmouseover=\"angewaehlt2(3)\" onmouseout=\"weg2(3)\"> <a href=\"#\"> Benutzer l&ouml;schen </a></td>
         </tr>
         <tr>
-            <td id=\"option4\" onmouseover=\"angewaehlt2(4)\" onmouseout=\"weg2(4)\"> <a href=\"#\"> Option4 </a> </td>
+            <td id=\"option4\" onmouseover=\"angewaehlt2(4)\" onmouseout=\"weg2(4)\"> <a href=\"#\"> Eigenes Passwort &auml;ndern </a> </td>
+        </tr>
+        <tr>
+            <td id=\"option5\" onmouseover=\"angewaehlt2(5)\" onmouseout=\"weg2(5)\"> <a href=\"#\"> Eigenes Passwort an <br/> Email-Adresse senden </a> </td>
         </tr>
     </table>
 </aside>
@@ -38,6 +41,9 @@ echo "
         else if(x==4) {
             document.getElementById(\"option4\").bgColor=\"white\";
                        }
+        else if(x==5) {
+            document.getElementById(\"option5\").bgColor=\"white\";
+                       }
     }
 
     //Funktion wird ausgefuehrt wenn Maus weg-faehrt
@@ -54,8 +60,10 @@ echo "
         else if(x==4) {
             document.getElementById(\"option4\").bgColor=\"yellow\";
                       }
+        else if(x==5) {
+            document.getElementById(\"option5\").bgColor=\"yellow\";
+                      }
     }
     </script>
 ";
 ?>
-

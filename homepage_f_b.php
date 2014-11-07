@@ -23,11 +23,11 @@ session_start();
         ?>
         
         <?php
-        include('homepage_b.aside.inc.php');
+        include('homepage_f.aside.inc.php');
         ?>
                     
         <?php
-        include('homepage_b.article.inc.php');
+        include('homepage_f_b.article.inc.php');
         ?>
 
 
@@ -38,4 +38,3 @@ session_start();
     </body>
     
 </html>
-

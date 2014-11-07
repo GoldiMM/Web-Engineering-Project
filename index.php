@@ -1,4 +1,9 @@
-<!-- PHP -->
+<!-- PHP 
+Startseite des Benutzers. Hier kann der Benutzer zum Online Verwaltungstool einloggen
+Es wird eine Session gestartet und bisherige Sessions werden gelöscht
+
+Mit dem JavaScript wird der Benutzereingabe vom Passwort kontrolliert
+-->
 <?php
    //Eine Session starten
     session_start();

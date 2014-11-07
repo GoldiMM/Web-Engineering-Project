@@ -23,7 +23,7 @@ session_start();
         ?>
         
         <?php
-        include('homepage_b.aside.inc.php');
+        include('homepage_f.aside.inc.php');
         ?>
                     
         <?php
