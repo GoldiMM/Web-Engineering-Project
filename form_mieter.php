@@ -16,44 +16,30 @@
 			     <br/>
 			     <input type="submit" name="submit" value="erfassen">
      	</form>
-<?php
-include ('db_Cando.inc.php');
 
-if (isset($_POST['submit'])){
-	
-	//create local variables for the post fields
-	$sql = "INSERT INTO Mieter (Anrede, Vorname, Nachname)
-			VALUES ('$_POST[feld1]','$_POST[feld2]', '$_POST[feld3]')";
+	<?php
+		include ('db_Cando.inc.php');
+		if (isset($_POST['submit'])){
+			$sql = "INSERT INTO Mieter (Anrede, Vorname, Nachname)
+					VALUES ('$_POST[feld1]','$_POST[feld2]', '$_POST[feld3]')";
+			$conn->multi_query($sql);
+			// _________________________Feedback Resultat Ausgabe ___________________
+			echo ("<h3>Aktuelle Mieterliste </h3> <br>");
 
-	$conn->multi_query($sql);
-
-// 																	Feedback Ausgabe
-echo ("<h3>Aktuelle Mieterliste </h3> <br>");
-
-$sql = "SELECT Mieter_ID, Anrede, Vorname, Nachname FROM Mieter";
-$result = $conn->query($sql);
-
-	if ($result->num_rows > 0) {
-	    // output data of each row
-	    while($row = $result->fetch_assoc()) {
-	        echo 
-	        "Mieter " 	. $row["Mieter_ID"].
-	        "   : "			. $row["Anrede"]. 
-	        "     "			. $row["Vorname"]. 
-	        "    " 			. $row["Nachname"]. "<br>";
-	    	}
-		} 
-		else {
-		    echo "0 results";
-		}
-
-
-} //end of isset
-
-
-
-
-?>
-
+			$sql = "SELECT Mieter_ID, Anrede, Vorname, Nachname FROM Mieter ORDER BY Mieter_ID DESC";
+			$result = $conn->query($sql);
+				if ($result->num_rows > 0) {
+				    while($row = $result->fetch_assoc()) {
+				        echo 	"Mieter " 		. $row["Mieter_ID"].
+						        "   : "			. $row["Anrede"]. 
+						        "     "			. $row["Vorname"]. 
+						        "    " 			. $row["Nachname"]. "<br>";
+					}
+				} 
+				else {
+					    echo "0 results";
+				}
+			} //end of isset
+	?>
 </body>
 </html>
