@@ -23,7 +23,9 @@
 			$sql = "INSERT INTO Mieter (Anrede, Vorname, Nachname)
 					VALUES ('$_POST[feld1]','$_POST[feld2]', '$_POST[feld3]')";
 			$conn->multi_query($sql);
-			// _________________________Feedback Resultat Ausgabe ___________________
+		} //end of isset
+		
+		// _________________________Feedback Resultat Ausgabe ___________________
 			echo ("<h3>Aktuelle Mieterliste </h3> <br>");
 
 			$sql = "SELECT Mieter_ID, Anrede, Vorname, Nachname FROM Mieter ORDER BY Mieter_ID DESC";
@@ -39,7 +41,7 @@
 				else {
 					    echo "0 results";
 				}
-			} //end of isset
+
 	?>
 </body>
 </html>

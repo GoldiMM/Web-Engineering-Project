@@ -11,4 +11,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Connect to server and select database.
+//mysql_connect("$host", "$username", "$password")or die("cannot connect");
+//mysql_select_db("$db_name")or die("cannot select DB");
+
 ?>
