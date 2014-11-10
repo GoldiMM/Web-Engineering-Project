@@ -14,7 +14,7 @@ echo "
             <td id=\"option2\" onmouseover=\"angewaehlt2(2)\" onmouseout=\"weg2(2)\"> <a href=\"homepage_f_b.php\"> Neuer Benutzer erfassen </a> </td>
         </tr>
         <tr>
-            <td id=\"option3\" onmouseover=\"angewaehlt2(3)\" onmouseout=\"weg2(3)\"> <a href=\"#\"> Benutzer l&ouml;schen </a></td>
+            <td id=\"option3\" onmouseover=\"angewaehlt2(3)\" onmouseout=\"weg2(3)\"> <a href=\"homepage_f_c.php\"> Benutzer l&ouml;schen </a></td>
         </tr>
         <tr>
             <td id=\"option4\" onmouseover=\"angewaehlt2(4)\" onmouseout=\"weg2(4)\"> <a href=\"#\"> Eigenes Passwort &auml;ndern </a> </td>
