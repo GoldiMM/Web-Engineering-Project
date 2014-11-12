@@ -19,10 +19,10 @@
 							<td colspan="4"><strong>List data from mysql </strong> </td>
 						</tr>
 						<tr>
-							<td align="center"><strong>Name</strong></td>
-							<td align="center"><strong>Lastname</strong></td>
-							<td align="center"><strong>Email</strong></td>
-							<td align="center"><strong>Update</strong></td>
+							<td align="center"><strong>ID</strong></td>
+							<td align="center"><strong>Vorname</strong></td>
+							<td align="center"><strong>Nachname</strong></td>
+							<td align="center"><strong></strong></td>
 						</tr>
 
 						<?php

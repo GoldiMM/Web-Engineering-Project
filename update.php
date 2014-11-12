@@ -15,7 +15,7 @@
 ?>
 	<table width="400" border="0" cellspacing="1" cellpadding="0">
 		<tr> 						
-			<form action="update.php" method="POST">
+			<form action="update_go.php" method="POST">
 				<td> 				
 					<table width="100%" border="0" cellspacing="1" cellpadding="0">
 						<tr>
