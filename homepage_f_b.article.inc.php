@@ -6,7 +6,7 @@ echo "
 
 <p> Einen weiteren Benutzer f&uuml;r das Online-Verwaltungstool erfassen:  </p>
 <br/>
-<form name=\"form1\" action=\"homepage_f_b.php\" method=\"POST\">
+<form name=\"form1\" action=\"homepage_f_new.php\" method=\"POST\">
     <table>
         <tr>
             <td> Benutzername: </td> 

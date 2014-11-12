@@ -17,7 +17,7 @@ echo "
 
 <p> Welchen Benutzer wollen Sie l&ouml;schen?  </p>
 <br/>
-<form action=\"homepage_f_c.php\" method=\"POST\">
+<form action=\"homepage_f_del.php\" method=\"POST\">
 <table border=\"1\">";
 /* Tabellenkopf dynamisch ausgeben */
 $anz_spalten = mysql_num_fields($ergebnis);

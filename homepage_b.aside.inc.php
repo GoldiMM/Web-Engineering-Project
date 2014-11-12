@@ -8,16 +8,16 @@ echo "
 <aside>
     <table border=\"5\" cellspacing=\"9pt\" cellpadding=\"5pt\" bgcolor=\"yellow\" class=\"navbar2\">
         <tr>
-            <td id=\"option1\" onmouseover=\"angewaehlt2(1)\" onmouseout=\"weg2(1)\"> <a href=\"#\">  Mieter erfassen </a> </td>
+            <td id=\"option1\" onmouseover=\"angewaehlt2(1)\" onmouseout=\"weg2(1)\"> <a href=\"homepage_b_disp.php\">  &Uuml;bersicht der Mieter</a> </td>
         </tr>
         <tr>
-            <td id=\"option2\" onmouseover=\"angewaehlt2(2)\" onmouseout=\"weg2(2)\"> <a href=\"#\"> Mieterspiegel </a> </td>
+            <td id=\"option2\" onmouseover=\"angewaehlt2(2)\" onmouseout=\"weg2(2)\"> <a href=\"homepage_b_new.php\"> Neuen Mieter erfassen </a> </td>
         </tr>
         <tr>
-            <td id=\"option3\" onmouseover=\"angewaehlt2(3)\" onmouseout=\"weg2(3)\"> <a href=\"#\"> Option3 </a></td>
+            <td id=\"option3\" onmouseover=\"angewaehlt2(3)\" onmouseout=\"weg2(3)\"> <a href=\"homepage_b_edit.php\"> Mieter bearbeiten </a></td>
         </tr>
         <tr>
-            <td id=\"option4\" onmouseover=\"angewaehlt2(4)\" onmouseout=\"weg2(4)\"> <a href=\"#\"> Option4 </a> </td>
+            <td id=\"option4\" onmouseover=\"angewaehlt2(4)\" onmouseout=\"weg2(4)\"> <a href=\"homepage_b_del.php\"> Mieter l&ouml;schen </a> </td>
         </tr>
     </table>
 </aside>
