@@ -50,7 +50,12 @@ $sql = "CREATE TABLE IF NOT EXISTS Benutzer (
 )";
 //funny, only the last table listed gets created.. who knows why?
 
-
+// sql to create table
+$sql = "CREATE TABLE IF NOT EXISTS Rechnungen (
+	Rechnungs_ID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	Kategorie ENUM('Reparaturen','Öl','Wasser','Strom','Hauswart','','')
+	Betrag DOUBLE (30) NOT NULL
+)";
 
 if ($conn->query($sql) === TRUE) {
     echo " table created successfully";
