@@ -27,7 +27,7 @@ session_start();
         ?>
                     
         <?php
-        include('homepage_b.article.inc.php');
+        include('homepage_f.article.inc.php');
         ?>
 
 

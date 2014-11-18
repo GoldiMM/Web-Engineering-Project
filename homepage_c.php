@@ -16,18 +16,26 @@ session_start();
         
         <?php
         include('homepage.header.inc.php');    
+        ?>
         
+        <?php
         include('homepage.nav.inc.php');
+        ?>
         
-        include('homepage_f.aside.inc.php');
+        <?php
+        include('homepage_c.aside.inc.php');
+        ?>
                     
-        include('#');   //disp_benutzer.article.inc.php
+        <?php
+        include('homepage_c.article.inc.php'); 
+        ?>
 
+
+        <?php
         include('homepage.footer.inc.php');
         ?>
              
     </body>
     
 </html>
-
 

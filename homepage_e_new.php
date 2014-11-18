@@ -19,9 +19,9 @@ session_start();
         
         include('homepage.nav.inc.php');
         
-        include('homepage_f.aside.inc.php');
+        include('homepage_e.aside.inc.php');
                     
-        include('#');   //disp_benutzer.article.inc.php
+        include('#'); //new_rechnung.article.inc.php
 
         include('homepage.footer.inc.php');
         ?>
@@ -29,5 +29,3 @@ session_start();
     </body>
     
 </html>
-
-

@@ -19,9 +19,9 @@ session_start();
         
         include('homepage.nav.inc.php');
         
-        include('homepage_f.aside.inc.php');
+        include('homepage_d.aside.inc.php');
                     
-        include('#');   //disp_benutzer.article.inc.php
+        include('#'); //edit_vertrag.article.inc.php
 
         include('homepage.footer.inc.php');
         ?>

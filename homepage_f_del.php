@@ -16,22 +16,13 @@ session_start();
         
         <?php
         include('homepage.header.inc.php');    
-        ?>
         
-        <?php
         include('homepage.nav.inc.php');
-        ?>
         
-        <?php
         include('homepage_f.aside.inc.php');
-        ?>
                     
-        <?php
-        include('homepage_f_c.article.inc.php');
-        ?>
+        include('#'); //del_benutzer.article.inc.php
 
-
-        <?php
         include('homepage.footer.inc.php');
         ?>
              
