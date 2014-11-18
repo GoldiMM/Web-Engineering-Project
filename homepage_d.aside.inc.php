@@ -1,5 +1,5 @@
 <!-- 
-In dieser Klasse wird die Navigationsbar an der linken Seite gesteuert von der Seite homepage_f
+In dieser Klasse wird die Navigationsbar an der linken Seite gesteuert von der Seite homepage_b
 Die Menupunkte heissen jeweils option1, option2, usw.
 ---->
 <?php
@@ -8,16 +8,16 @@ echo "
 <aside>
     <table border=\"5\" cellspacing=\"9pt\" cellpadding=\"5pt\" bgcolor=\"yellow\" class=\"navbar2\">
         <tr>
-            <td id=\"option1\" onmouseover=\"angewaehlt2(1)\" onmouseout=\"weg2(1)\"> <a href=\"homepage_f_disp.php\">  &Uuml;bersicht der Benutzer  </a> </td>
+            <td id=\"option1\" onmouseover=\"angewaehlt2(1)\" onmouseout=\"weg2(1)\"> <a href=\"homepage_d_disp.php\">  &Uuml;bersicht der Vertr&auml;ge</a> </td>
         </tr>
         <tr>
-            <td id=\"option2\" onmouseover=\"angewaehlt2(2)\" onmouseout=\"weg2(2)\"> <a href=\"homepage_f_new.php\"> Neuer Benutzer erfassen </a> </td>
+            <td id=\"option2\" onmouseover=\"angewaehlt2(2)\" onmouseout=\"weg2(2)\"> <a href=\"homepage_d_new.php\"> Neuer Vertrag erfassen </a> </td>
         </tr>
         <tr>
-            <td id=\"option3\" onmouseover=\"angewaehlt2(3)\" onmouseout=\"weg2(3)\"> <a href=\"homepage_f_del.php\"> Benutzer l&ouml;schen </a></td>
+            <td id=\"option3\" onmouseover=\"angewaehlt2(3)\" onmouseout=\"weg2(3)\"> <a href=\"homepage_d_edit.php\"> Vertrag bearbeiten </a></td>
         </tr>
         <tr>
-            <td id=\"option4\" onmouseover=\"angewaehlt2(4)\" onmouseout=\"weg2(4)\"> <a href=\"homepage_f_edit.php\"> Eigenes Passwort &auml;ndern </a> </td>
+            <td id=\"option4\" onmouseover=\"angewaehlt2(4)\" onmouseout=\"weg2(4)\"> <a href=\"homepage_d_del.php\"> Vertrag l&ouml;schen </a> </td>
         </tr>
     </table>
 </aside>

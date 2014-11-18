@@ -43,20 +43,15 @@ session_start();
         
         <?php
         include('homepage.header.inc.php');    
-        ?>
-        
-        <?php
+
         include('homepage.nav.inc.php');
         ?>
         
         <aside> &nbsp; </aside>
-                    
+        
         <?php
         include('homepage.article.inc.php');
-        ?>
 
-
-        <?php
         include('homepage.footer.inc.php');
         ?>
              

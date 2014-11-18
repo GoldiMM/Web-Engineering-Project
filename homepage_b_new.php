@@ -16,22 +16,13 @@ session_start();
         
         <?php
         include('homepage.header.inc.php');    
-        ?>
         
-        <?php
         include('homepage.nav.inc.php');
-        ?>
         
-        <?php
         include('homepage_b.aside.inc.php');
-        ?>
                     
-        <?php
-        include('mieter_new.article.inc.php');
-        ?>
+        include('#'); //new_mieter.article.inc.php
 
-
-        <?php
         include('homepage.footer.inc.php');
         ?>
              
