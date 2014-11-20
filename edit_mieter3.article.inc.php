@@ -3,12 +3,11 @@
 	// File Name form: edit_mieter.article.inc.php
 		$tablename = 'Mieter';
 		$primaryKey = 'Mieter_ID';
-
-		$sqlUpdate = "UPDATE $tablename SET Anrede = 	'$_POST[feld1]' ,
-									   		Vorname =	'$_POST[feld2]' ,
-									   		Nachname =	'$_POST[feld3]' ,
-									   		Email =		'$_POST[feld4]' ,
-									   		Telefon =	'$_POST[feld5]'
+		$sqlUpdate = "UPDATE $tablename SET Anrede =  	'$_POST[feld1]' ,
+									   Vorname =	'$_POST[feld2]' ,
+									   Nachname =	'$_POST[feld3]' ,
+									   Email =		'$_POST[feld4]' ,
+									   Telefon =	'$_POST[feld5]'
 
 		WHERE $primaryKey = $_POST[feld0] ";
 		$result = $conn->query($sqlUpdate);

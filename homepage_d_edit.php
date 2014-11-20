@@ -21,7 +21,7 @@ session_start();
         
         include('homepage_d.aside.inc.php');
                     
-        include('#'); //edit_vertrag.article.inc.php
+        include('edit_vertrag.article.inc.php'); 
 
         include('homepage.footer.inc.php');
         ?>

@@ -20,7 +20,7 @@
 
 	echo "<article>";
 		echo "<table border=\"1\">";
-		echo '<form action="delete_dynamic_go.php" method="POST">';
+		echo '<form action="del_mieter3.article.inc.php" method="POST">';
 		/* Tabellenkopf dynamisch ausgeben */
 				//$fields = mysqli_fetch_fields($result);
 				//$headers = array();
@@ -41,12 +41,12 @@
 					<?php
 			        } // end of for					
 		}//end of if 
-
 		/* Formularabschluss */
 		echo "<tr>";
 ?>
 		<td>
-			<input name="id" type="hidden" id="id" value="<?php echo $row["$headers[0]"];?> " >
+			
+
 		</td>
 <?php 
 		echo "<td>";

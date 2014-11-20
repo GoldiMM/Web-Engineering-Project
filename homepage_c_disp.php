@@ -21,7 +21,7 @@ session_start();
         
         include('homepage_c.aside.inc.php');
                     
-        include('#');   //disp_wohnung.article.inc.php
+        include('disp_wohnung.article.inc.php'); 
 
         include('homepage.footer.inc.php');
         ?>

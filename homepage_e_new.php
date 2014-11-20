@@ -21,11 +21,9 @@ session_start();
         
         include('homepage_e.aside.inc.php');
                     
-        include('#'); //new_rechnung.article.inc.php
-
+        include('new_rechnung.article.inc.php'); 
         include('homepage.footer.inc.php');
         ?>
              
     </body>
-    
 </html>
