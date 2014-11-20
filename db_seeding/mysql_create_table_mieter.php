@@ -16,9 +16,11 @@ if ($conn->connect_error) {
 // sql to create table
 $sql = "CREATE TABLE IF NOT EXISTS Mieter (
 	Mieter_ID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	Anrede ENUM('Frau','Herr','',''),
 	Vorname VARCHAR(30) NOT NULL,
 	Nachname VARCHAR(30) NOT NULL,
-	Anrede ENUM('Frau','Herr','','')
+	Email VARCHAR(30),
+	Telefon VARCHAR(30)	
 )";
 
 

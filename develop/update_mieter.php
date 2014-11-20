@@ -10,7 +10,6 @@
    			die(mysql_error()); // TODO: better error handling
 		}
 ?>
-
 		<table width="400" border="0" cellspacing="1" cellpadding="0">
 			<tr>
 				<td>

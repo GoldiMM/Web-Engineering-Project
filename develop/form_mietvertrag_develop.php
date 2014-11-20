@@ -15,13 +15,27 @@
 
 <html>
     <head> 
+    	  <meta charset="utf-8">
+	  <title>jQuery UI Datepicker - Restrict date range</title>
+		  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+			  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+			  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+			  <link rel="stylesheet" href="/resources/demos/style.css">
+				<script>
+					$(function() {
+					$("#datepicker").datepicker({ minDate: "-12M", maxDate: "+12M" });
+					$("#datepicker").datepicker("option", "dateFormat", "yy/mm/dd");
+					});
+				</script>
     </head>
+
     <body>
       <h1>Mietvertrag erfassen</h1>
      	 <form action="form_mietvertrag_develop.php" method="POST">
 			     <fieldset>
-			      	<legend>Neuer Mietvertrag </legend>
-			      	<label>Miete (in chf): 		<input type="text" name="feld1"> 	</label> 
+			      	<legend>Neuer Mietvertrag 		</legend>
+			      	<label>Miete (in chf): 			<input type="text" name="feld1"> 	</label> 
+			      	<label>Mietbeginn (tt/mm/jj): 	<input type="text" id="datepicker" name="datum1"></label> 	
 					<label>Mieter:  </label> 
 					<select name="feld2">
 						<?php
@@ -39,6 +53,8 @@
 								}							
 						?>
 					</select>
+
+
 					<label>Wohnung:  </label> 
 					<select name="feld3">
 						<?php
@@ -66,8 +82,8 @@
 	//____________________________data transmission to DB ______________
 	if (isset($_POST['submit'])){
 
-		$sql = "INSERT INTO Mietvertraege (Miete, Mieter_ID, Wohnungs_ID)
-				VALUES ('$_POST[feld1]','$_POST[feld2]','$_POST[feld3]')";
+		$sql = "INSERT INTO Mietvertraege (Miete, Mietbeginn, Mieter_ID, Wohnungs_ID)
+				VALUES ('$_POST[feld1]','$_POST[datum1]','$_POST[feld2]','$_POST[feld3]')";  
 		$conn->multi_query($sql);
 	} //end of isset
 
@@ -83,6 +99,7 @@
 			    while($row = $result->fetch_assoc()) {
 			        echo 
 			        "Vertag Nr. " 				. $row["Vertrags_ID"].
+			        "  Mietbeginn  : "			. $row["Mietbeginn"]. 
 			        "  Miete  : "				. $row["Miete"]. ".- CHF   |   " .
 		   	        "  Name: "					. $row["Nachname"]. 
 		   	        "  Vorname: "				. $row["Vorname"]. "  |   " .
