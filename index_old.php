@@ -5,27 +5,7 @@ Es wird eine Session gestartet und bisherige Sessions werden gelöscht
 Mit dem JavaScript wird der Benutzereingabe vom Passwort kontrolliert
 -->
 <?php
-    session_start();
-    print_r($_SESSION);
-
-    /*
-    if(isset($_GET['killSession'])){
-        session_destroy();
-        print_r($_SESSION);
-    }
-    else {
-    //Eine Session starten
-    // Löschen aller Session-Variablen, somit können wir ein 
-    // Logout auf diese Seite lenken
-    //$_SESSION = array();
-    /*
-    if (ini_get("session.use_cookies")) {
-        $params = session_get_cookie_params();
-        setcookie(session_name(), '', time() - 42000, $params["path"], $params["domain"], $params["secure"], $params["httponly"]
-        );
-    }
-    }
-       //Eine Session starten
+   //Eine Session starten
     session_start();
 
     // Löschen aller Session-Variablen, somit können wir ein 
@@ -42,7 +22,6 @@ Mit dem JavaScript wird der Benutzereingabe vom Passwort kontrolliert
 
     // Zum Schluß, löschen aller Daten der Session.
     session_destroy();
-    */
 ?>
 
 <!-- HTML - index ist die Login-Page -->

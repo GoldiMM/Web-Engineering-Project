@@ -6,7 +6,6 @@
 	$sql = "SELECT * FROM $tablename";  
 	$result = $conn->query($sql);
 
-	echo "<article>";
 		echo "<table border=\"1\">";
 		/* Tabellenkopf dynamisch ausgeben */
 				$fields = mysqli_fetch_fields($result);
@@ -39,5 +38,4 @@
 			}
 
 		echo "</table>";
-	echo "</article>";
 ?>

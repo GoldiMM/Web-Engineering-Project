@@ -20,7 +20,7 @@
 	$row = $result->fetch_assoc();
 	$fields = mysqli_fetch_fields($result);
 				$headers = array();
-	echo "<article>";
+
 		echo "<table border=\"1\">";
 		echo '<form action="edit_rechnung3.article.inc.php" method="POST">';
 		/* Tabellenkopf dynamisch ausgeben */
@@ -53,5 +53,4 @@
 		echo "</tr>";
 	echo "</form>";
 	echo "</table>" ;
-	echo "</article>";
 ?>

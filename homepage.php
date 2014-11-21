@@ -21,7 +21,7 @@ session_start();
             $benutzername = $_POST['nickname'];
             $password = $_POST['password'];
             //$password = md5($password);   
-            $_SESSION['eingeloggt'] = false;
+            //$_SESSION['eingeloggt'] = false;
 
             //Datenbankverbindung aufbauen
             include "db.inc.php";

@@ -1,51 +1,17 @@
-<!-- PHP 
-Startseite des Benutzers. Hier kann der Benutzer zum Online Verwaltungstool einloggen
-Es wird eine Session gestartet und bisherige Sessions werden gelöscht
-
-Mit dem JavaScript wird der Benutzereingabe vom Passwort kontrolliert
--->
 <?php
-    session_start();
-    print_r($_SESSION);
+	session_start();
+	session_destroy();
+	
 
-    /*
-    if(isset($_GET['killSession'])){
-        session_destroy();
-        print_r($_SESSION);
-    }
-    else {
-    //Eine Session starten
-    // Löschen aller Session-Variablen, somit können wir ein 
-    // Logout auf diese Seite lenken
-    //$_SESSION = array();
-    /*
-    if (ini_get("session.use_cookies")) {
+	// Falls die Session gelöscht werden soll, löschen Sie auch das Session-Cookie.
+	 if (ini_get("session.use_cookies")) {
         $params = session_get_cookie_params();
         setcookie(session_name(), '', time() - 42000, $params["path"], $params["domain"], $params["secure"], $params["httponly"]
         );
     }
-    }
-       //Eine Session starten
-    session_start();
-
-    // Löschen aller Session-Variablen, somit können wir ein 
-    // Logout auf diese Seite lenken
-    $_SESSION = array();
-
-    // Falls die Session gelöscht werden soll, löschen Sie auch das Session-Cookie.
-    // Achtung: Damit wird die Session gelöscht, nicht nur die Session-Daten!
-    if (ini_get("session.use_cookies")) {
-        $params = session_get_cookie_params();
-        setcookie(session_name(), '', time() - 42000, $params["path"], $params["domain"], $params["secure"], $params["httponly"]
-        );
-    }
-
-    // Zum Schluß, löschen aller Daten der Session.
-    session_destroy();
-    */
 ?>
 
-<!-- HTML - index ist die Login-Page -->
+<!-- logout -Page -->
 <html>
     <head>
         <title>Online-Verwaltungstool</title> 
@@ -78,6 +44,7 @@ Mit dem JavaScript wird der Benutzereingabe vom Passwort kontrolliert
     </head>
 
     <body>
+    	
         <form name="formLogin" onsubmit="return checkLogin()" action="homepage.php" method="POST">
             <?php
             include('index.header.inc.php');
@@ -86,10 +53,10 @@ Mit dem JavaScript wird der Benutzereingabe vom Passwort kontrolliert
             <nav> &nbsp; </nav>
             
             <aside> &nbsp; </aside>
+            <article>
+            	<h1>  "Sie wurden ausgeloggt -> <a href='index.php'> erneut einloggen   </a><h1>
+           	</article>
             
-            <?php
-            include('index.article.inc.php');
-            ?>
 
             <?php
             include('index.footer.inc.php');

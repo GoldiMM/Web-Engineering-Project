@@ -1,4 +1,3 @@
-<article>
     <body>
       <h1>Mieter erfassen</h1>
      	 <form action="new_mieter.article.inc.php" method="POST">
@@ -42,4 +41,3 @@
 					    echo "0 results";
 				}
 	?>
-</article>

@@ -1,15 +1,19 @@
 <?php
-	// connect to db 
-	include ('db_Cando.inc.php');
-	//_____Variable_______//
+
+	//__variables__
+	$pagename = 'Neuer Benutzer';
 	$tablename = 'Benutzer';
-	//_____Default statement //
-	$sql = "SELECT * FROM $tablename";  
+	$action = 'new_benutzer2.article.inc.php';
+
+
+	//__generic query__
+	include ('db_Cando.inc.php');
+	$sql = "SELECT * FROM $tablename"; 
 	$result = $conn->query($sql);
 
-		echo "<article>";
+	//__display__
 			echo "<table border=\"1\">";
-				echo '<form action="new_dynamic_go.php" method="POST">';
+				echo '<form action="'.$action.'" method="POST">';
 
 					/* Tabellenkopf dynamisch ausgeben */
 					$fields = mysqli_fetch_fields($result);
@@ -38,5 +42,4 @@
 					echo "</tr>";
 				echo "</form>";
 			echo "</table>";
-		echo "</article>";
 ?>
