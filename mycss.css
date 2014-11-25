@@ -61,9 +61,28 @@ a {
     color:black;
 }
 
+table{
+   border: 1px solid green;
+   border-collapse: collapse;
+} 
+
+td {
+    border: 1px solid green;
+    padding: 3px;
+    border-collapse: collapse;
+   
+    text-align: left;
+}
+
+th {
+    height: 50px;
+} 
 
 
 /* Sonstige-Tags */
+
+
+
 .log {
     align:center;
 }

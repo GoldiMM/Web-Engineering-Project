@@ -14,11 +14,17 @@
 			     </fieldset>
 			     <br/>
 			     <input type="submit" name="submit" value="erfassen">
+
+			     <input type="button" value=".." onclick="load('ajax_article', 'disp_mieter.article.inc.php');"> 
+
      	</form>
 
 	<?php
 		include ('db_Cando.inc.php');
 		if (isset($_POST['submit'])){
+
+			// #FIXME load article here // Telesko input: ev in form load sonst jQuery
+
 			$sql = "INSERT INTO Mieter (Anrede, Vorname, Nachname, Email, Telefon)
 					VALUES ('$_POST[feld1]','$_POST[feld2]', '$_POST[feld3]','$_POST[feld4]', '$_POST[feld5]')";
 			$conn->multi_query($sql);

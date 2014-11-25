@@ -1,60 +1,50 @@
-<!-- PHP -->
 <?php
 // vorhandene Session aufnehmen
 session_start();
 ?>
-<!-- PHP -->
+    <html>
+        <head> 
+            <title> Online-Verwaltungstool </title> 
+            <link rel="stylesheet" href="mycss.css" type="text/css">  
+        </head>
 
-<!-- HTML -->
-<html>
-    <head> 
-        <title> Online-Verwaltungstool </title> 
-        <link rel="stylesheet" href="mycss.css" type="text/css">  
-    </head>
+        <body>
+            <?PHP
+                if (isset($_POST['nickname']) AND isset($_POST['password'])) {
 
-    <body>
-        <!-- PHP -->
-        <?PHP
-        if (isset($_POST['nickname']) AND isset($_POST['password'])) {
+                    // Variablen setzen
+                    $benutzername = $_POST['nickname'];
+                    $password = $_POST['password'];
+                    //$password = md5($password);   
+                    //$_SESSION['eingeloggt'] = false;
 
-            // Variablen setzen
-            $benutzername = $_POST['nickname'];
-            $password = $_POST['password'];
-            //$password = md5($password);   
-            //$_SESSION['eingeloggt'] = false;
+                    //Datenbankverbindung aufbauen
+                    include "db.inc.php";
 
-            //Datenbankverbindung aufbauen
-            include "db.inc.php";
+                    $link = mysql_connect("localhost", $benutzer, $passwordDB) or die("Verbindung zur Datenbank fehlgeschlagen!");
+                    mysql_select_db($dbname) or die("Datenbank nicht gefunden!");
 
-            $link = mysql_connect("localhost", $benutzer, $passwordDB) or die("Verbindung zur Datenbank fehlgeschlagen!");
-            mysql_select_db($dbname) or die("Datenbank nicht gefunden!");
+                    //prüfen ob es nickname und password gibt
+                    $abfrage = "SELECT Benutzername FROM benutzer WHERE Benutzername='$benutzername' AND Passwort='$password'";
+                    $ergebnis = mysql_query($abfrage) or die("Benutzername oder Passwort stimmt nicht!");
 
-            //prüfen ob es nickname und password gibt
-            $abfrage = "SELECT Benutzername FROM benutzer WHERE Benutzername='$benutzername' AND Passwort='$password'";
-            $ergebnis = mysql_query($abfrage) or die("Benutzername oder Passwort stimmt nicht!");
-
-            while ($zeile = mysql_fetch_array($ergebnis, MYSQL_ASSOC)) {
-                //$benutzernameAusDB = $zeile['Benutzername'];
-                $_SESSION['benutzername'] = $zeile['Benutzername'];
-                $_SESSION['eingeloggt'] = true;
-            }
-        }
-        ?>
-        
-        <?php
-        include('homepage.header.inc.php');    
-
-        include('homepage.nav.inc.php');
-        ?>
-        
-        <aside> &nbsp; </aside>
-        
-        <?php
-        include('homepage.article.inc.php');
-
-        include('homepage.footer.inc.php');
-        ?>
-             
+                    while ($zeile = mysql_fetch_array($ergebnis, MYSQL_ASSOC)) {
+                        //$benutzernameAusDB = $zeile['Benutzername'];
+                        $_SESSION['benutzername'] = $zeile['Benutzername'];
+                        $_SESSION['eingeloggt'] = true;                                                
+                    }
+                }
+                include('homepage.header.inc.php');    
+                include('homepage.nav.inc.php');
+            ?>
+            <aside> &nbsp; </aside>        
+            <?php
+                include('homepage.article.inc.php');
+                include('homepage.footer.inc.php');
+                //Zugriffs-Begrenzung: 
+                if(!isset($_SESSION['benutzername'])){ //if login in session is not set redirect to 404 page
+                    header("Location: http://localhost/Web-Engineering-Project/unauthorized.php");
+                }
+            ?>        
     </body>
-    
 </html>

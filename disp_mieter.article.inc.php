@@ -1,3 +1,6 @@
+<header>
+<link rel="stylesheet" href="mycss.css" type="text/css">  
+</header>
 <?php
 	
 	//__variables__
