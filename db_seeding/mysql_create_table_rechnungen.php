@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 $sql = "CREATE TABLE IF NOT EXISTS Rechnungen (
 	Rechnungs_ID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	Rechnungsdatum DATE,
-	Kategorie ENUM('Reparaturen','Oel','Wasser','Strom','Hauswart','',''),
+	Kategorie ENUM('Reparaturen','Oel','Wasser','Strom','Hauswart','Heizkosten','',''),
 	Betrag FLOAT
 )";
 
