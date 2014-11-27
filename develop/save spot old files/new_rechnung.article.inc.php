@@ -3,7 +3,7 @@
 	$sqlRechnungen = "SELECT Kategorie FROM Rechnungen";
 	$result = $conn->query($sqlRechnungen);
 	if($result === FALSE) {
-   	die(mysql_error()); // TODO: better error handling
+   	die(mysql_error()); 
 	}
 ?>
 

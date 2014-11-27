@@ -14,9 +14,7 @@
 			     </fieldset>
 			     <br/>
 			     <input type="submit" name="submit" value="erfassen">
-
-			     <input type="button" value=".." onclick="load('ajax_article', 'disp_mieter.article.inc.php');"> 
-
+			     <input type="button" value="see List " onclick="load('ajax_article', 'disp_mieter.article.inc.php');"> 
      	</form>
 
 	<?php

@@ -1,0 +1,101 @@
+<?php
+    session_start();
+    include('authorization.inc.php');
+
+    //__variables__
+    $pagename = 'Rechnungsliste';
+    $tablename = 'Rechnungen';  
+    $form_action = 'rechnung_new.php';
+    $old_form_action = 'form_rechnung.php';
+
+    //__db queries for dropdown lists
+    include ('db_Cando.inc.php');
+    $sqlRechnungen = "SELECT Kategorie FROM Rechnungen";
+    $result = $conn->query($sqlRechnungen);
+    if($result === FALSE) {
+        die(mysql_error()); 
+    }
+?>
+
+<html>
+    <head> 
+        <title> Online-Verwaltungstool </title>
+        <link rel="stylesheet" href="mycss.css" type="text/css"> 
+        <?php 
+            include('ajax.inc');
+        ?>
+        <!-- DATE PICKER  todo create include file -->
+        <meta charset="utf-8">
+        <title>jQuery UI Datepicker - Restrict date range</title>
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+                <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+                <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+                <link rel="stylesheet" href="/resources/demos/style.css">
+                <script>
+                    $(function() {
+                    $("#datepicker").datepicker({ minDate: "-12M", maxDate: "+12M" });
+                    $("#datepicker").datepicker("option", "dateFormat", "yy/mm/dd");
+                    });
+                </script>
+    </head>
+    <body>        
+        <?php
+            include('homepage.header.inc.php');    
+            include('homepage.nav.inc.php');
+            include('aside_rechnungen.inc.php');           
+        ?>
+
+        <article id="ajax_article">  <!--   UNIQUE CODE  because of foreign keys drop-down lists -->
+            <h1>Rechnung erfassen</h1>
+                <form action="<?php echo $form_action?>" method="POST">
+                    <fieldset>
+                        <legend>Neue Rechnung</legend>
+                        <label>Betrag (in chf):         <input type="text" name="feld1">    </label> 
+                        <label>Kategorie:  </label> 
+                        <select name="feld2">
+                              <option value="Reparaturen">Reparaturen</option>
+                              <option value="Oel">Oel</option>
+                              <option value="Wasser">Wasser</option>
+                              <option value="Strom">Strom</option>
+                        </select>
+                        <label>Datum (tt/mm/jj):     <input type="text" id="datepicker" name="datum1"></label>  
+                    </fieldset>
+                    <br/>
+                <input type="submit" name="submit" value="Daten erfassen">
+            </form>
+
+            <?php
+                //____________________________data transmission to DB ______________
+                if (isset($_POST['submit'])){
+                    $sql = "INSERT INTO Rechnungen (Betrag, Kategorie, Rechnungsdatum)
+                            VALUES ('$_POST[feld1]','$_POST[feld2]','$_POST[datum1]')";
+                    $conn->multi_query($sql);
+                    echo ("<h3> Neuer Datensatz erfasst ".$_POST['feld1'].".- CHF in Rg. Kategorie ".$_POST['feld2']." </h3>");    
+                } //end of isset
+
+                //_______________________Feedback Resultat-Ausgabe_____________________________
+                echo ("<h2> Rechnungsliste </h2><br>");
+                $sql = "SELECT *    FROM Rechnungen  ORDER BY Rechnungs_ID DESC ";
+                $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            echo 
+                            "Rechnungs_ID "             . $row["Rechnungs_ID"].
+                            "  Betrag  : "              . $row["Betrag"]. " CHF   |   " .
+                            "  Kategorie: "             . $row["Kategorie"]. 
+                            "  Rechnungsdatum: "        . $row["Rechnungsdatum"]. 
+                            "<br>"; 
+                        }
+                    } 
+                    else {
+                            echo "0 results";
+                }
+                echo"</br>";
+            ?>
+        </article>
+        <?php
+            include('homepage.footer.inc.php');
+        ?>
+   </body>    
+</html>

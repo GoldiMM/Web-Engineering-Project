@@ -3,13 +3,13 @@
 	$sqlmieter = "SELECT Mieter_ID, Nachname, Vorname FROM Mieter";
 	$result = $conn->query($sqlmieter);
 	if($result === FALSE) {
-   	die(mysql_error()); // TODO: better error handling
+   	die(mysql_error()); 
 	}
 
 	$sqlWohnungen = "SELECT Wohnungs_ID, Stockwerk, Zimmer FROM Wohnungen";
 	$resultWohnungen = $conn->query($sqlWohnungen);
 	if($resultWohnungen === FALSE) {
-   	die(mysql_error()); // TODO: better error handling
+   	die(mysql_error()); 
 	}
 ?>
 

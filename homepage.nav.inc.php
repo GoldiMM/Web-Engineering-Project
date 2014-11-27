@@ -3,7 +3,7 @@
 if ($_SESSION['eingeloggt'] == true) {
 echo "
     <nav> 
-	<table border=\"5\" cellspacing=\"9pt\" cellpadding=\"5pt\" bgcolor=\"#ADD8E6\" class=\"navbar\">
+	<table  border=\"5\" cellspacing=\"9pt\" cellpadding=\"5pt\" bgcolor=\"#ADD8E6\" class=\"navbar\">
             <tr>
 		<td id=\"menu1\" onmouseover=\"angewaehlt(1)\" onmouseout=\"weg(1)\"> <a href=\"homepage.php\">  Home </a></td>
 		<td id=\"menu2\" onmouseover=\"angewaehlt(2)\" onmouseout=\"weg(2)\"> <a href=\"mieter.php\"> Mieter  </a></td>

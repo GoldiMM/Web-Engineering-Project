@@ -41,10 +41,12 @@ session_start();
             <?php
                 include('homepage.article.inc.php');
                 include('homepage.footer.inc.php');
+                include('authorization.inc.php');
+                /*
                 //Zugriffs-Begrenzung: 
                 if(!isset($_SESSION['benutzername'])){ //if login in session is not set redirect to 404 page
                     header("Location: http://localhost/Web-Engineering-Project/unauthorized.php");
-                }
+                }*/
             ?>        
     </body>
 </html>

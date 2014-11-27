@@ -1,21 +1,12 @@
-<header>
-<link rel="stylesheet" href="mycss.css" type="text/css">  
-</header>
 <?php
-	
-	//__variables__
-	$pagename = 'Mieterliste';
-	$tablename = 'Mieter';
-
-
 	//__generic query__
 	include ('db_Cando.inc.php');
 	$sql = "SELECT * FROM $tablename"; 
 	$result = $conn->query($sql);
 
 	//__display__
-		echo "<h1>".$pagename."</h1>";
-			echo "<table border=\"1\">";
+		echo "<h2>".$pagename."</h2>";
+			echo "<table border=\"1\" cellspacing=\"0pt\" cellpadding=\"0 pt\" >";
 
 				/* Headers - dynamisch ausgeben */
 				$fields = mysqli_fetch_fields($result);
@@ -38,7 +29,7 @@
 				else {
 					    echo "0 results";
 				}
-
+			echo"<br>";
 			echo "</table>";
 		echo "</br>";
 ?>

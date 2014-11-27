@@ -16,11 +16,13 @@
 	if($result === FALSE) { die(mysql_error()); }
 	else { echo "dynamic update done"; }
 
+
+
+
+
 	//__generic query__	
 	$sqlSelect = "SELECT * FROM $tablename"; 
 	$result = $conn->query($sqlSelect);
-
-
 
 	//__display__
 	echo "<table border=\"1\">";

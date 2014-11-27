@@ -1,9 +1,8 @@
 <?php
-
 	//__variables__
-	$pagename = 'Neuer Benutzer';
-	$tablename = 'Benutzer';
-	$action = 'new_benutzer2.article.inc.php';
+	$pagename = 'Neue Wohnung';
+	$tablename = 'Wohnungen';
+	$action = 'new_wohnung2.article.inc.php';
 
 
 	//__generic query__
