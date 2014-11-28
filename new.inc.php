@@ -36,4 +36,13 @@
                     echo "</tr>";
                 echo "</form>";
             echo "</table>";
-?>
+            ?>
+                            
+               <!-- START Validation [MM] -->
+            <?php
+            $validation = false;
+            if (isset($_POST['submit'])) {
+            include ('validation_Wohnung.php');
+            }
+            ?>
+            <!-- END Validation [MM] -->

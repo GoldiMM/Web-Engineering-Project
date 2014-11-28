@@ -28,6 +28,8 @@
                 //Form for generic tuple creation new.inc.php
                 include('new.inc.php');
 
+                
+                if ($validation == true) {
                 if (isset($_POST['submit'])){
                     //__variable SQL statment__
                     $sql = "INSERT INTO $tablename (Stockwerk, Adresse, Postleitzahl, Ort, Quadratmeter, Zimmer)
@@ -42,7 +44,8 @@
                     // _______Process Feedback ___________________
                     echo ("<h3> Neuer Datensatz erfasst: ".$_POST['feld1']." ". $_POST['feld2']." ".$_POST['feld3']."</h3>");
                 } //end of isset  
-
+                }
+                
                 //__ display updated list     
                 include('display.inc.php');    
             ?>

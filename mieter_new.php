@@ -40,8 +40,18 @@
                     <br/>
                     <input type="submit" name="submit" value="erfassen">                    
                 </form>
+            
+            <!-- START Validation [MM] -->
+            <?php
+            $validation = false;
+            if (isset($_POST['submit'])) {
+            include ('validation_Mieter.php');
+            }
+            ?>
+            <!-- END Validation [MM] -->
 
             <?php
+            if ($validation == true) {
                 include ('db_Cando.inc.php');
                 if (isset($_POST['submit'])){
                     $sql = "INSERT INTO Mieter (Anrede, Vorname, Nachname, Email, Telefon)
@@ -51,13 +61,14 @@
                     // _________________________display mieter ___________________
                     echo ("<h3> Neuer Datensatz erfasst Mieter: ".$_POST['feld1']." ". $_POST['feld2']." ".$_POST['feld3']."</h3>");
                 } //end of isset
- 
+            }
             
                 //__ display updated list  
                 //variables__
                 $pagename = 'Mieterliste';
                 $tablename = 'Mieter';
-                include('display.inc.php');                                 
+                include('display.inc.php');    
+            
             ?>
         </article>
 
