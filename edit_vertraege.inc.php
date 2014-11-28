@@ -9,5 +9,6 @@
 	$delete_link	= 'vertrag_delete.php';
 
 	include ('edit_delete_table.inc.php');	
+	
 ?>
 
