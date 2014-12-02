@@ -18,7 +18,7 @@ function Header()
 mysql_connect('localhost','Cando','yes123');
 mysql_select_db('hausverwaltung');
 
-$pdf=new PDF();
+$pdf=new PDF('L');
 $pdf->AddPage();
 $wasser = ('SELECT * FROM rechnungen ');
 //First table: put all columns automatically
