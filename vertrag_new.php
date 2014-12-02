@@ -30,7 +30,7 @@
         <?php 
             include('ajax.inc');
         ?>
-        <!-- DATE PICKER  todo create include file -->
+        <!-- DATE PICKER  todo exchange with include file -->
         <meta charset="utf-8">
         <title>jQuery UI Datepicker - Restrict date range</title>
             <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
@@ -43,6 +43,14 @@
                     $("#datepicker").datepicker("option", "dateFormat", "yy/mm/dd");
                     });
                 </script>
+                <script>
+                  $(function() {
+                    $( "#datepicker2" ).datepicker({ minDate: 0, maxDate: "+12M " });
+                    //$("#datepicker2" ).datepicker("option", "dateFormat", "dd.mm.yy");
+                  });
+                </script>
+
+        <!-- end of include file -->
     </head>
     <body>        
         <?php
@@ -51,13 +59,14 @@
             include('aside_vertraege.inc.php');           
         ?>
 
-        <article id="ajax_article">  <!--   UNIQUE CODE  because of foreign keys drop-down lists -->
+        <article id="ajax_article">  <!--   UNIQUE CODE  because of foreign keys drop-down lists  TODO second date into DB -->
             <h1>Mietvertrag erfassen</h1>
                 <form action="<?php echo $form_action?>" method="POST">
                     <fieldset>
                         <legend>Neuer Mietvertrag       </legend>
                         <label>Miete (in chf):          <input type="text" name="feld1">    </label> 
-                        <label>Mietbeginn (tt/mm/jj):   <input type="text" id="datepicker" name="datum1"></label>   
+                        <label>Mietbeginn (tt/mm/jj):   <input type="text" id="datepicker" name="datum1"></label> 
+                        <label>Mietende (tt/mm/jj):     <input type="text" id="datepicker2" name="datum2"></label> 
                         <label>Mieter:  </label> 
                         <select name="feld2">
                             <?php

@@ -11,6 +11,7 @@
 
         <?php 
             include('ajax.inc');
+          	include('datepicker.inc.php');
         ?>
     </head>
     <body>        
@@ -50,27 +51,38 @@
 						}
 						echo "</tr>\n";
 
-					/* Eingabefelder  dynamisch ausgeben  */
-					if ($result->num_rows > 0) {
-					 	echo "<tr>";
-					 		//read only for first field - as it's the ID 
-					 		for ($id=0; $id<1; $id++){ 
+				/* Eingabefelder  dynamisch ausgeben   - except  DATEPICKER */
+				if ($result->num_rows > 0) {
+				 	echo "<tr>";
+					 		
+
+					for ($i=0; $i<sizeof($headers); $i++){ 
+						if($i==0){//read only for id 
 							?>
-							   	<td> 
-									<input name="feld<?php echo $id;?>" type="text" style="background:grey; color:black;" value= "<?php echo $row["$headers[$id]"]; ?> " size="20" readonly>
-								</td>
-								<?php
-							}//end of readonly for ID Field
-						 	for ($i=1; $i<sizeof($headers); $i++){ 
-						 	?>
-							  	<td> 
-									<input name="feld<?php echo $i;?>" type="text" value= "<?php echo $row["$headers[$i]"]; ?> " size="20">
-								</td>
+							<td> 
+								<input name="feld<?php echo $i;?>" type="text" style="background:grey; color:black;" value= "<?php echo $row["$headers[$i]"]; ?> " size="20" readonly>
+							</td>
 							<?php
-							} // end of for					
-					}//end of if 
+						 	}
+						if($i==2 || $i== 3){//datepicker for dates TODO - enter datepicker logic Change submit fields - date 1 !
+							?>
+							<td> 
+								<input type="text" id="datepicker<?php echo $i;?>" name="date<?php echo $i;?>" style="background:green; color:black;" value= "<?php echo $row["$headers[$i]"]; ?> " size="20">
+							</td>
+							<?php
+
+						}
+						else{ //normal field
+							?>
+							<td> 
+								<input name="feld<?php echo $i;?>" type="text" value= "<?php echo $row["$headers[$i]"]; ?> " size="20">
+							</td>
+							<?php
+						}
+					} // end of for					
+				}//end of if 
 					
-					?>
+				?>
 					<!-- Formularabschluss -->
 					<tr>
 						<td>
