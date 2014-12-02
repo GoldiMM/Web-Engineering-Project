@@ -1,7 +1,7 @@
 <!-- INCLUDE FILE -->
 
 <!-- INCLUDE FILE -->
-        <aside>
+        <aside class="aside">
             <table border="4" cellspacing="5pt" cellpadding="2pt" bgcolor="blue" class="navbar2">
                 <tr> 
                     <td>
@@ -15,7 +15,7 @@
                 </tr>
                 <tr> 
                     <td>
-                        <input type="button" value="Benutzer bearbeiten / entfernen " onclick="load('ajax_article', 'edit_benutzer.inc.php');"> 
+                        <button type="button"  onclick="load('ajax_article', 'edit_benutzer.inc.php');"> Benutzer bearbeiten / entfernen  </button>
                     </td>
                 </tr>               
             </table>

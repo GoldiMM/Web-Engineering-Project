@@ -1,5 +1,5 @@
 <!-- INCLUDE FILE -->
-        <aside>
+        <aside class="aside">
             <table border="4" cellspacing="5pt" cellpadding="2pt" bgcolor="blue" class="navbar2">
                 <tr> 
                     <td>
@@ -13,7 +13,7 @@
                 </tr>
                 <tr> 
                     <td>
-                        <input type="button" value="Rechnungen bearbeiten / entfernen " onclick="load('ajax_article', 'edit_rechnungen.inc.php');"> 
+                        <button type="button" onclick="load('ajax_article', 'edit_rechnungen.inc.php');"> Rechnungen bearbeiten / entfernen  </button> 
                     </td>
                 </tr>               
             </table>

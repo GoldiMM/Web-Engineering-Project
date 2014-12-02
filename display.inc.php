@@ -6,7 +6,7 @@
 
 	//__display__
 		echo "<h2>".$pagename."</h2>";
-			echo "<table border=\"1\" cellspacing=\"0pt\" cellpadding=\"0 pt\" >";
+			echo "<table border=\"5\" cellspacing=\"0pt\" cellpadding=\"0 pt\" class=\"t\">";
 
 				/* Headers - dynamisch ausgeben */
 				$fields = mysqli_fetch_fields($result);

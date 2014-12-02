@@ -1,5 +1,5 @@
 <!-- INCLUDE FILE -->
-        <aside>
+        <aside class="aside">
             <table border="4" cellspacing="5pt" cellpadding="2pt" bgcolor="blue" class="navbar2">
                 <tr> 
                     <td>
@@ -13,12 +13,12 @@
                 </tr>
                 <tr> 
                     <td>
-                        <input type="button" value="Mieteingang buchen" onclick="load('ajax_article', 'book_vertraege.inc.php');"> 
+                        <button type="button" onclick="load('ajax_article', 'book_vertraege.inc.php');"> Mieteingang buchen   </button>
                     </td>
                 </tr>  
                 <tr> 
                     <td>
-                        <input type="button" value="Vertrag bearbeiten / entfernen " onclick="load('ajax_article', 'edit_vertraege.inc.php');"> 
+                        <button type="button" onclick="load('ajax_article', 'edit_vertraege.inc.php');"> Vertrag bearbeiten / entfernen</button> 
                     </td>
                 </tr>               
             </table>
