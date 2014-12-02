@@ -25,6 +25,9 @@
         <article id="ajax_article">         
             <?php 
                 include ('display.inc.php');   
+                //PDF [FB]
+                echo "<form name=\"pdf\" action=\"pdfBenutzer.php\" method=\"POST\">
+                 <input type=\"submit\"  value=\"PDF-Ausgabe\" > </form>    ";
             ?>
         </article>
 

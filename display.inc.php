@@ -32,7 +32,4 @@
 			echo"<br>";
 			echo "</table>";
 		echo "</br>";
-                //PDF [FB]
-                echo "<form name=\"pdf\" action=\"pdfMieter.php\" method=\"POST\">
-                 <input type=\"submit\"  value=\"PDF-Ausgabe\" > </form>    ";
 ?>
