@@ -38,7 +38,7 @@
 			echo "<article id=\"ajax_article\">";
 			echo "<table border=\"1\">";
 				echo "<div>";
-					echo "following data is updated: ID Nr. "; 
+					echo "Die folgenden Daten wurden angepasst:  ID Nr. "; 
 					echo "$_POST[feld0]   <br>" ;
 					echo "$_POST[feld1]";
 					echo "$_POST[feld2]" ;

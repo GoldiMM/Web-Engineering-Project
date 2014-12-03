@@ -42,7 +42,10 @@
         <?php
             include('homepage.header.inc.php');    
             include('homepage.nav.inc.php');
-            include('aside_rechnungen.inc.php');           
+            include('aside_rechnungen.inc.php'); 
+            //local variables
+            $pagename = 'Rechnungsliste';
+            $tablename = 'Rechnungen';              
         ?>
 
         <article id="ajax_article">  <!--   UNIQUE CODE  because of foreign keys drop-down lists -->
@@ -72,29 +75,11 @@
                     $conn->multi_query($sql);
                     echo ("<h3> Neuer Datensatz erfasst ".$_POST['feld1'].".- CHF in Rg. Kategorie ".$_POST['feld2']." </h3>");    
                 } //end of isset
+            // Ausgabe der Liste
+            include ('display.inc.php');
 
-                //_______________________Feedback Resultat-Ausgabe_____________________________
-                echo ("<h2> Rechnungsliste </h2><br>");
-                $sql = "SELECT *    FROM Rechnungen  ORDER BY Rechnungs_ID DESC ";
-                $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
-                        // output data of each row
-                        while($row = $result->fetch_assoc()) {
-                            echo 
-                            "Rechnungs_ID "             . $row["Rechnungs_ID"].
-                            "  Betrag  : "              . $row["Betrag"]. " CHF   |   " .
-                            "  Kategorie: "             . $row["Kategorie"]. 
-                            "  Rechnungsdatum: "        . $row["Rechnungsdatum"]. 
-                            "<br>"; 
-                        }
-                    } 
-                    else {
-                            echo "0 results";
-                }
-                echo"</br>";
-            ?>
-        </article>
-        <?php
+        echo'</article>';
+     
             include('homepage.footer.inc.php');
         ?>
    </body>    

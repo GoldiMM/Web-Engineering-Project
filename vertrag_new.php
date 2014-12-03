@@ -116,6 +116,7 @@
                     echo ("<h3> Neuer Datensatz erfasst, Wohnung nr. ".$_POST['feld3']." </h3>");    
                 } //end of isset
 
+
                 // _______________________Feedback Resultat-Ausgabe_____________________________
                 echo ("<h2> Vertragsliste </h2><br>");
                 $sql = "SELECT *    FROM Mietvertraege, Mieter, Wohnungen
