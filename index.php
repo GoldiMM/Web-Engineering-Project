@@ -1,4 +1,4 @@
-<!-- PHP 
+﻿<!-- PHP 
 Startseite des Benutzers. Hier kann der Benutzer zum Online Verwaltungstool einloggen
 Es wird eine Session gestartet und bisherige Sessions werden gelöscht
 
