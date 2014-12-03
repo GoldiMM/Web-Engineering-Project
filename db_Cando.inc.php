@@ -5,7 +5,7 @@
         $dbname = "u947198430_db";
 
 	// Create connection
-	$conn = new mysqli($db_host, $db_username, $db_pass);
+	$conn = new mysqli($db_host, $db_username, $db_pass, $dbname);
 	// Check connection
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
