@@ -30,7 +30,7 @@
 		<article id="ajax_article">
 			<?php
 				include ('edit.inc.php');
-			?>
+                        ?>
 		</article>
 	</body> 
 </html> 

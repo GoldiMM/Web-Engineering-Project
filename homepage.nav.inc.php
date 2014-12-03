@@ -3,7 +3,7 @@
 if ($_SESSION['eingeloggt'] == true) {
 echo "
     <nav> 
-	<table  border=\"5\" cellspacing=\"9pt\" cellpadding=\"5pt\" bgcolor=\"#ADD8E6\" class=\"navbar\">
+	<table  border=\"5\" cellspacing=\"9pt\" cellpadding=\"5pt\" bgcolor=\"yellow\" class=\"navbar\">
             <tr>
 		<td id=\"menu1\" onmouseover=\"angewaehlt(1)\" onmouseout=\"weg(1)\"> <a href=\"homepage.php\">  Home </a></td>
 		<td id=\"menu2\" onmouseover=\"angewaehlt(2)\" onmouseout=\"weg(2)\"> <a href=\"mieter.php\"> Mieter  </a></td>
@@ -20,44 +20,44 @@ echo "
         // Funktion wird ausgefuehrt wenn Maus weg-faehrt
 	function angewaehlt(x) {
             if(x==1) {
-		document.getElementById(\"menu1\").bgColor=\"white\";
+		document.getElementById(\"menu1\").bgColor=\"#82BB5D\";
                      }
             else if(x==2) {
-		document.getElementById(\"menu2\").bgColor=\"white\";
+		document.getElementById(\"menu2\").bgColor=\"#82BB5D\";
 			  }
             else if(x==3) {
-		document.getElementById(\"menu3\").bgColor=\"white\";
+		document.getElementById(\"menu3\").bgColor=\"#82BB5D\";
 			  }
             else if(x==4) {
-		document.getElementById(\"menu4\").bgColor=\"white\";
+		document.getElementById(\"menu4\").bgColor=\"#82BB5D\";
 			  }
             else if(x==5) {
-		document.getElementById(\"menu5\").bgColor=\"white\";
+		document.getElementById(\"menu5\").bgColor=\"#82BB5D\";
 			  }
             else if(x==6) {
-		document.getElementById(\"menu6\").bgColor=\"white\";
+		document.getElementById(\"menu6\").bgColor=\"#82BB5D\";
 			  }
 	}
 
 	//Funktion wird ausgefuehrt wenn Maus weg-faehrt
 	function weg(x){
             if (x==1) {
-		document.getElementById(\"menu1\").bgColor=\"#ADD8E6\";
+		document.getElementById(\"menu1\").bgColor=\"#B3E095\";
                       }
             else if(x==2) {
-		document.getElementById(\"menu2\").bgColor=\"#ADD8E6\";
+		document.getElementById(\"menu2\").bgColor=\"#B3E095\";
 			  }
             else if(x==3) {
-                document.getElementById(\"menu3\").bgColor=\"#ADD8E6\";
+                document.getElementById(\"menu3\").bgColor=\"#B3E095\";
 			  }
             else if(x==4) {
-		document.getElementById(\"menu4\").bgColor=\"#ADD8E6\";
+		document.getElementById(\"menu4\").bgColor=\"#B3E095\";
 			  }
             else if(x==5) {
-		document.getElementById(\"menu5\").bgColor=\"#ADD8E6\";
+		document.getElementById(\"menu5\").bgColor=\"#B3E095\";
 			  }
             else if(x==6) {
-		document.getElementById(\"menu6\").bgColor=\"#ADD8E6\";
+		document.getElementById(\"menu6\").bgColor=\"#B3E095\";
 			  }
 	}
     </script>

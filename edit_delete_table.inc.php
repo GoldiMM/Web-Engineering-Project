@@ -4,6 +4,7 @@
 
 	$sql = "SELECT * FROM $tablename";  
 	$result = $conn->query($sql);
+            echo "<h2> Daten bearbeiten</h2>";
 		echo "<table border=\"1\">";
 		/* Tabellenkopf dynamisch ausgeben */
 				$fields = mysqli_fetch_fields($result);

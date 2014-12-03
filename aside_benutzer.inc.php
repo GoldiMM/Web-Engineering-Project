@@ -2,7 +2,7 @@
 
 <!-- INCLUDE FILE -->
         <aside class="aside">
-            <table border="4" cellspacing="5pt" cellpadding="2pt" bgcolor="blue" class="navbar2">
+            <table  class="navbar2">
                 <tr> 
                     <td>
                         <a href="benutzer.php"><button type="button">&Uuml;bersicht der Benutzer </button></a>

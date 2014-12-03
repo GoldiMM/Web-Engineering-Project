@@ -1,5 +1,5 @@
 <?php
-//Hier alles korrekt, Index beginnt bei 0!
+//Variablen
 $validation = true;
 $stockwerk = ucfirst($_POST["feld1"]); 
 $adresse = ucfirst($_POST["feld2"]); 
@@ -23,7 +23,12 @@ if (!is_numeric($stockwerk)) {
     echo "<p><font color=\"red\"> $stockwerkErr  </font> </p>";
 }
 
-//Adresse (eventuell noch machen)
+//Adresse
+if ( !preg_match("/^[a-zA-Z0-9 -]+$/", $adresse)  ) {
+    $adresseErr = "Bitte Adresse korrekt ausf&uuml;llen!";
+    $validation = false;
+    echo "<p><font color=\"red\"> $adresseErr  </font> </p>";
+}
 
 //Postleitzahl
 if ( !((is_numeric($postleitzahl)) && (strlen($postleitzahl) == 4))      ) {
