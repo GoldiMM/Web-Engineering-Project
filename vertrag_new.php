@@ -107,7 +107,17 @@
                     <input type="submit" name="submit" value="erfassen">
                 </form>
 
+            <!-- START Validation [MM] -->
             <?php
+            $validation = false;
+            if (isset($_POST['submit'])) {
+            include ('validation_Vertrag.php');
+            }
+            ?>
+            <!-- END Validation [MM] -->
+            
+            <?php
+            if ($validation == true) {
                 //____________________________data transmission to DB ______________
                 if (isset($_POST['submit'])){
                     $sql = "INSERT INTO Mietvertraege (Miete, Mietbeginn, Mieter_ID, Wohnungs_ID)
@@ -115,7 +125,7 @@
                     $conn->multi_query($sql);
                     echo ("<h3> Neuer Datensatz erfasst, Wohnung nr. ".$_POST['feld3']." </h3>");    
                 } //end of isset
-
+            }
 
                 // _______________________Feedback Resultat-Ausgabe_____________________________
                 echo ("<h2> Vertragsliste </h2><br>");
