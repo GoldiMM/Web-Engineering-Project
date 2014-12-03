@@ -1,11 +1,11 @@
 <?php
-	$db_host = "localhost";
-	$db_username = "Cando";
+	$db_host = "mysql.hostinger.de";
+	$db_username = "u947198430_user";
 	$db_pass = "yes123";
-	$db_name = "Hausverwaltung";
+        $dbname = "u947198430_db";
 
 	// Create connection
-	$conn = new mysqli($db_host, $db_username, $db_pass, $db_name);
+	$conn = new mysqli($db_host, $db_username, $db_pass);
 	// Check connection
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);

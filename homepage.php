@@ -21,11 +21,11 @@ session_start();
                     //Datenbankverbindung aufbauen
                     include "db.inc.php";
 
-                    $link = mysql_connect("localhost", $benutzer, $passwordDB) or die("Verbindung zur Datenbank fehlgeschlagen!");
+                    $link = mysql_connect("mysql.hostinger.de", $benutzer, $passwordDB) or die("Verbindung zur Datenbank fehlgeschlagen!");
                     mysql_select_db($dbname) or die("Datenbank nicht gefunden!");
 
                     //prüfen ob es nickname und password gibt
-                    $abfrage = "SELECT Benutzername FROM benutzer WHERE Benutzername='$benutzername' AND Passwort='$password'";
+                    $abfrage = "SELECT Benutzername FROM Benutzer WHERE Benutzername='$benutzername' AND Passwort='$password'";
                     $ergebnis = mysql_query($abfrage) or die("Benutzername oder Passwort stimmt nicht!");
 
                     while ($zeile = mysql_fetch_array($ergebnis, MYSQL_ASSOC)) {
