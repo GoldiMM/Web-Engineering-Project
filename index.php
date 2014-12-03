@@ -89,7 +89,7 @@ Mit dem JavaScript wird der Benutzereingabe vom Passwort kontrolliert
             include('index.article.inc.php');
             ?>
 
-            <?phpx
+            <?php
             include('index.footer.inc.php');
             ?>        
         </form> 
