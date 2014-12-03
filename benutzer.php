@@ -26,7 +26,7 @@
             <?php 
                 include ('display.inc.php');   
                 //PDF [FB]
-                echo "<form name=\"pdf\" action=\"pdfBenutzer.php\" method=\"POST\">
+                echo "<form name=\"pdf\" action=\"PDFbenutzer.php\" method=\"POST\">
                  <input type=\"submit\"  value=\"PDF-Ausgabe\" > </form>    ";
             ?>
         </article>

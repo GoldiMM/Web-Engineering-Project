@@ -1,5 +1,5 @@
 <?php
-require('PDF_Generator\\fpdf.php');
+require('PDF_Generator/fpdf.php');
 
 class PDF_MySQL_Table extends FPDF
 {

@@ -15,8 +15,8 @@ function Header()
 }
 
 //Connect to database
-mysql_connect('localhost','Cando','yes123');
-mysql_select_db('hausverwaltung');
+mysql_connect('mysql.hostinger.de','u947198430_user','yes123');
+mysql_select_db('u947198430_db');
 
 $pdf=new PDF();
 $pdf->AddPage();
