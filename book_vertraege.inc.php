@@ -37,7 +37,7 @@
                                         }
                                     } 
                                     else {
-                                        echo "0 results";
+                                        echo "Keine Daten vorhanden";
                                 }                           
                             ?>
                         </select>                 

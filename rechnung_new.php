@@ -54,14 +54,15 @@
                     <fieldset>
                         <legend>Neue Rechnung</legend>
                         <label>Betrag (in chf):         <input type="text" name="feld1">    </label> 
+                        <label>Datum (tt/mm/jj):     <input type="text" id="datepicker" name="feld2"></label> 
                         <label>Kategorie:  </label> 
-                        <select name="feld2">
+                        <select name="feld3">
                               <option value="Reparaturen">Reparaturen</option>
                               <option value="Oel">Oel</option>
                               <option value="Wasser">Wasser</option>
                               <option value="Strom">Strom</option>
                         </select>
-                        <label>Datum (tt/mm/jj):     <input type="text" id="datepicker" name="datum1"></label>  
+                        <label>Lieferant: <input type="text" name="feld4"> </label> 
                     </fieldset>
                     <br/>
                 <input type="submit" name="submit" value="Daten erfassen">
@@ -70,17 +71,16 @@
             <?php
                 //____________________________data transmission to DB ______________
                 if (isset($_POST['submit'])){
-                    $sql = "INSERT INTO Rechnungen (Betrag, Kategorie, Rechnungsdatum)
-                            VALUES ('$_POST[feld1]','$_POST[feld2]','$_POST[datum1]')";
+                    $sql = "INSERT INTO Rechnungen (Betrag, Rechnungsdatum, Kategorie, Lieferant)
+                            VALUES ('$_POST[feld1]','$_POST[feld2]','$_POST[feld3]','$_POST[feld4]')";
                     $conn->multi_query($sql);
-                    echo ("<h3> Neuer Datensatz erfasst ".$_POST['feld1'].".- CHF in Rg. Kategorie ".$_POST['feld2']." </h3>");    
+                    echo ("<h3> Neuer Datensatz erfasst ".$_POST['feld1'].".- CHF in Rg. Kategorie ".$_POST['feld3']." Lieferant: ".$_POST['feld4']." </h3>");    
                 } //end of isset
             // Ausgabe der Liste
             include ('display.inc.php');
 
         echo'</article>';
-     
-            include('homepage.footer.inc.php');
+        include('homepage.footer.inc.php');
         ?>
    </body>    
 </html>

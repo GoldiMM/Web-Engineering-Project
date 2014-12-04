@@ -15,35 +15,11 @@
                     <td>
                         <button type="button" onclick="load('ajax_article', 'edit_rechnungen.inc.php');"> Rechnungen bearbeiten / entfernen  </button> 
                     </td>
-                </tr>               
+                </tr>   
+                <tr> 
+                    <td>
+                        <a href="nebenkosten.php"><button type="button"> Nebenkostenabrechnung</button></a>
+                    </td>
+                </tr>            
             </table>
         </aside>
-
-        
-
-<!-- 
-        <aside>
-            <table border="4" cellspacing="5pt" cellpadding="2pt" bgcolor="blue" class="navbar2">
-                <tr> 
-                    <td>
-                        <input type="button" value="&Uuml;bersicht der Rechnungen" onclick="load('ajax_article', 'disp_rechnung.article.inc.php');"> 
-                    </td>
-                </tr>
-                <tr> 
-                    <td>
-                        <input type="button" value="Neue Rechnung erfassen" onclick="load('ajax_article', 'new_rechnung.article.inc.php');"> 
-                    </td>
-                </tr>
-                <tr> 
-                    <td>
-                        <input type="button" value="Rechnung bearbeiten" onclick="load('ajax_article', 'edit_rechnung.article.inc.php');"> 
-                    </td>
-                </tr>
-                <tr> 
-                    <td>
-                        <input type="button" value="Rechnung l&ouml;schen" onclick="load('ajax_article', 'edit_rechnung.article.inc.php');"> 
-                    </td>
-                </tr>
-            </table>
-        </aside>
- -->

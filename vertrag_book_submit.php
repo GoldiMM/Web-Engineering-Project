@@ -53,15 +53,15 @@
 			}
 			else {
 				?>
-				<article id=\"ajax_article\">
-					<table border=\"1\">
+				<article id="ajax_article">
+					<table border="1">
 						<div>
 							Miete erfasst Vertrag Nr.	<?php echo $_GET['id']?>
 							Neuer Zahlungssaldo 		<?php echo $neuerZahlungsaldo?>
 
 						</div>
 					</table>
-				</article  id=\"ajax_article\">
+				</article  id="ajax_article">
 			<?php
 			}
 			?>

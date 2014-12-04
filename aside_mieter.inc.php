@@ -15,6 +15,11 @@
                     <td>
                         <button type="button" onclick="load('ajax_article', 'edit_mieter.inc.php');"> Mieter bearbeiten / entfernen </button> 
                     </td>
-                </tr>               
+                </tr>
+                <tr> 
+                    <td>
+                        <button type="button" onclick="load('ajax_article', 'mieterspiegel.inc.php');"> Mieterspiegel </button> 
+                    </td>
+                </tr>                         
             </table>
         </aside>

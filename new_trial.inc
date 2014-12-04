@@ -7,7 +7,8 @@
       
         echo"<br>";
             // try to format as fieldset
-            echo '<table border="1" class="userinput">';
+            echo "<fieldset>";
+            
                 echo '<form action="'.$form_action.'" method="POST">';
 
                     /* Tabellenkopf dynamisch ausgeben */

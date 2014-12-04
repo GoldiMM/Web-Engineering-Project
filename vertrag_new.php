@@ -66,7 +66,6 @@
                         <legend>Neuer Mietvertrag       </legend>
                         <label>Miete (in chf):          <input type="text" name="feld1">    </label> 
                         <label>Mietbeginn (tt/mm/jj):   <input type="text" id="datepicker" name="datum1"></label> 
-                        <label>Mietende (tt/mm/jj):     <input type="text" id="datepicker2" name="datum2"></label> 
                         <label>Mieter:  </label> 
                         <select name="feld2">
                             <?php
@@ -98,7 +97,7 @@
                                         }
                                     } 
                                     else {
-                                        echo "0 results";
+                                        echo "Keine Daten vorhanden";
                                     }                           
                             ?>
                         </select>                    
@@ -123,32 +122,28 @@
                     $sql = "INSERT INTO Mietvertraege (Miete, Mietbeginn, Mieter_ID, Wohnungs_ID)
                             VALUES ('$_POST[feld1]','$_POST[datum1]','$_POST[feld2]','$_POST[feld3]')";  
                     $conn->multi_query($sql);
-                    echo ("<h3> Neuer Datensatz erfasst, Wohnung nr. ".$_POST['feld3']." </h3>");    
+                    echo ("<h3> Neuer Vertrag erfasst f&uuml;r auf Wohnung nr. ".$_POST['feld3']." Mieter Nr. ".$_POST['feld2']." </h3>");    
                 } //end of isset
+<<<<<<< Updated upstream
             }
+=======
 
-                // _______________________Feedback Resultat-Ausgabe_____________________________
-                echo ("<h2> Vertragsliste </h2><br>");
-                $sql = "SELECT *    FROM Mietvertraege, Mieter, Wohnungen
-                                    WHERE Mietvertraege.Mieter_ID = Mieter.Mieter_ID AND Mietvertraege.Wohnungs_ID = Wohnungen.Wohnungs_ID
-                                    ORDER BY Vertrags_ID DESC" ;
+                //__display of contracts__   
+                $pagename       = 'Vorhandene Vertr&auml;ge';
+>>>>>>> Stashed changes
+
+                $sql = "SELECT   Vertrags_ID, Anrede,  Vorname, Nachname, Mietvertraege.Wohnungs_ID, Zimmer, Stockwerk,  Bezahlte_Miete, Miete  FROM Mietvertraege, Mieter, Wohnungen
+                        WHERE Mietvertraege.Mieter_ID = Mieter.Mieter_ID                           
+                        AND    Mietvertraege.Wohnungs_ID = Wohnungen.Wohnungs_ID
+                        ORDER BY Vertrags_ID DESC" ;
+            
                 $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
-                        // output data of each row
-                        while($row = $result->fetch_assoc()) {
-                                echo 
-                                "Vertag Nr. "               . $row["Vertrags_ID"].
-                                "  Mietbeginn  : "          . $row["Mietbeginn"]. 
-                                "  Miete  : "               . $row["Miete"]. ".- CHF   |   " .
-                                "  Name: "                  . $row["Nachname"]. 
-                                "  Vorname: "               . $row["Vorname"]. "  |   " .
-                                "  "                        . $row["Zimmer"]. "- Zi Wohnung " . " im ".
-                                ""                          . $row["Stockwerk"]. ". Stock". "<br>"; 
-                        }
-                    } 
-                    else {
-                        echo "0 results";
-                    }
+                if ($result->num_rows > 0) {
+                    include ('display.join.inc');
+                }
+                else {
+                    echo "Keine Daten vorhanden";
+                }
             ?>
         </article>
 

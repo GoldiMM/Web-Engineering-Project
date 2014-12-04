@@ -29,7 +29,7 @@
 		 			for ($i=0; $i<sizeof($headers); $i++){ 
 		 				?>
 			        	<td> 
-							<input name="feld<?php echo $i;?>" type="text" value= "<?php echo $row["$headers[$i]"]; ?> " size="20">
+							<input name="feld<?php echo $i;?>" type="text" value= "<?php echo $row["$headers[$i]"]; ?> " size="20" >
 						</td>
 			<?php
 			        } // end of for					
@@ -43,7 +43,7 @@
 			</tr>
 		
 			<td>
-				<input type="submit" name="submit" value="Datensatz entfernen">	
+				<input type="submit" name="submit" value="Datensatz endg&uuml;ltig entfernen" style="color:red; font-weight: bold; ">	
 				<input type="button" value="zur&uuml;ck zur Liste " onclick="load('ajax_article', '<?php echo $cancel_link?>');"> 			
 			</td>
 			</tr>

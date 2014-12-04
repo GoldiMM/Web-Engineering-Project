@@ -35,7 +35,7 @@
 
         <article id="ajax_article"> 
             </br> 
-            <h3> Datensatz wurde entfernt </h3>               
+            <h3>Datensatz Nr. <?php echo $_POST['feld0'] ?> wurde entfernt </h3>               
             <?php 
                 include ('edit_wohnungen.inc.php')
             ?>

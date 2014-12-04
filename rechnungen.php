@@ -5,7 +5,7 @@
 
 <html>
     <head> 
-        <title> Online-Verwaltungstool | Wohnungen </title> 
+        <title> Online-Verwaltungstool | Rechnungen </title> 
         <link rel="stylesheet" href="mycss.css" type="text/css">  
         <?php 
             include('ajax.inc');

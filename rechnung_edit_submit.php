@@ -37,10 +37,14 @@
 				echo "<article id=\"ajax_article\">";
 				echo "<table border=\"1\">";
 					echo "<div>";
-						echo "Daten angepasst: Rechnung Nr. "; 
+						echo "Daten angepasst";
+						echo"</br> Rechnung Nr. "; 					
 						echo "$_POST[feld0]   <br>" ;
-						echo "$_POST[feld1]";
-						echo "$_POST[feld2]" ;
+						echo"Rechnungsdatum: ";
+						echo "$_POST[feld1]  <br>";
+						echo "Kategorie : ";
+						echo "$_POST[feld2]  <br>" ;
+						echo "Rechungsbetrag: CHF ";
 						echo "$_POST[feld3]  <br>";		
 					echo "</div>";
 				echo "</table>";

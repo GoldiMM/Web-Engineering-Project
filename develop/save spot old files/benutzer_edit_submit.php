@@ -36,10 +36,12 @@
 			echo "<article id=\"ajax_article\">";
 			echo "<table border=\"1\">";
 				echo "<div>";
-					echo "Daten angepasst: Benutzer Nr. "; 
-					echo "$_POST[feld0]   <br>" ;
-					echo "$_POST[feld1]";
-					echo "$_POST[feld2]" ;		
+
+					echo "Daten angepasst";
+					echo"</br> Benutzer Nr. "; 
+					echo "$_POST[feld0]   </br>" ;
+					echo "Beutzername".$_POST['feld1']."</br>";
+					echo "Passwort ". $_POST['feld2'] ;		
 				echo "</div>";
 			echo "</table>";
 			echo "</article  id=\"ajax_article\">";

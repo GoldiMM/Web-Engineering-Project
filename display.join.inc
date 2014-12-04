@@ -1,8 +1,8 @@
 <?php
 	//__generic query__
 	include ('db_Cando.inc.php');
-	$sql = "SELECT * FROM $tablename"; 
-	$result = $conn->query($sql);
+	//$sql = "SELECT * FROM $tablename"; 
+	//$result = $conn->query($sql);
 
 	//__display__
 		echo "<h2>".$pagename."</h2>";
