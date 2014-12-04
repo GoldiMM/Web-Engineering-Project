@@ -5,8 +5,7 @@
 	//$result = $conn->query($sql);
 
 	//__display__
-		echo "<h2>".$pagename."</h2>";
-			echo "<table border=\"5\" cellspacing=\"0pt\" cellpadding=\"0 pt\" class=\"t\">";
+			echo '<table width="60% border="2" cellspacing="0.5pt" cellpadding="0.5 pt" class="t">';
 
 				/* Headers - dynamisch ausgeben */
 				$fields = mysqli_fetch_fields($result);
@@ -29,7 +28,6 @@
 				else {
 					    echo "Keine Daten vorhanden";
 				}
-			echo"<br>";
 			echo "</table>";
 		echo "</br>";
 ?>
