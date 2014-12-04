@@ -124,13 +124,13 @@
                     $conn->multi_query($sql);
                     echo ("<h3> Neuer Vertrag erfasst f&uuml;r auf Wohnung nr. ".$_POST['feld3']." Mieter Nr. ".$_POST['feld2']." </h3>");    
                 } //end of isset
-<<<<<<< Updated upstream
+
             }
-=======
+
 
                 //__display of contracts__   
                 $pagename       = 'Vorhandene Vertr&auml;ge';
->>>>>>> Stashed changes
+
 
                 $sql = "SELECT   Vertrags_ID, Anrede,  Vorname, Nachname, Mietvertraege.Wohnungs_ID, Zimmer, Stockwerk,  Bezahlte_Miete, Miete  FROM Mietvertraege, Mieter, Wohnungen
                         WHERE Mietvertraege.Mieter_ID = Mieter.Mieter_ID                           
