@@ -8,11 +8,15 @@
 
     
     //process DB update after submit (former delete_dynamic_go.php)
-    if (isset($_POST['submit'])){
-        $sqlDelete = "DELETE FROM $tablename WHERE $primaryKey = $_POST[feld0]";
-        $result = $conn->query($sqlDelete);
-        if($result === FALSE) {
-            die(mysql_error()); 
+    if (isset($_POST['submit'])){    
+         if (true){ // Bedingung wenn noch andere Benutzer vorhanden sind -     
+            $sqlDelete = "DELETE FROM $tablename WHERE $primaryKey = $_POST[feld0]";
+            $result = $conn->query($sqlDelete);
+            if($result === FALSE) {
+                die(mysql_error()); 
+            }
+        }else{
+            //Letzer Benutzer, kann nicht gelöscht werden. 
         }
     }
 ?>
