@@ -15,12 +15,12 @@ function Header()
 }
 
 //Connect to database
-mysql_connect('localhost','Cando','yes123');
-mysql_select_db('hausverwaltung');
+mysql_connect('mysql.hostinger.de','u947198430_user','yes123');
+mysql_select_db('u947198430_db');
 
 $pdf=new PDF('L');
 $pdf->AddPage();
-$mieter = ('SELECT * FROM wohnungen ');
+$mieter = ('SELECT * FROM Wohnungen');
 //First table: put all columns automatically
 $pdf->Table($mieter);
 

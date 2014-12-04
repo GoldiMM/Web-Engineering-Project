@@ -21,7 +21,7 @@ mysql_select_db('u947198430_db');
 $pdf=new PDF();
 $pdf->AddPage();
 //First table: put all columns automatically
-$pdf->Table('SELECT Benutzer_ID, Benutzername FROM `benutzer`');
+$pdf->Table('SELECT Benutzer_ID, Benutzername FROM `Benutzer`');
 //$pdf->AddPage();
 //Second table: specify 3 columns
 //$pdf->AddCol('Anrede',40,'','C');

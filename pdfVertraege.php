@@ -20,7 +20,7 @@ mysql_select_db('u947198430_db');
 
 $pdf=new PDF('L');
 $pdf->AddPage();
-$mieter = ('SELECT * FROM mietvertraege ');
+$mieter = ('SELECT * FROM Mietvertraege');
 //First table: put all columns automatically
 $pdf->Table($mieter);
 
