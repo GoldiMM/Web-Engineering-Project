@@ -45,6 +45,6 @@
 			else {
 				    echo "0 results";
 			}
-		echo "</br>"	
+		echo "</br>";	
 	echo "</table>";
 ?>
