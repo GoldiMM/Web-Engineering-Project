@@ -20,7 +20,8 @@ $sql = "CREATE TABLE IF NOT EXISTS Mieter (
 	Vorname VARCHAR(30) NOT NULL,
 	Nachname VARCHAR(30) NOT NULL,
 	Email VARCHAR(30),
-	Telefon VARCHAR(30)	
+	Telefon VARCHAR(30),
+        Nebenkostenbeitrag INT(10)
 )";
 
 

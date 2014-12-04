@@ -20,17 +20,16 @@ mysql_select_db('u947198430_db');
 
 $pdf=new PDF('L');
 $pdf->AddPage();
-$wasser = ('SELECT Kategorie, SUM(Betrag) FROM `rechnungen` WHERE Kategorie =\'Wasser\'');
-$reparaturen = ('SELECT Kategorie, SUM(Betrag) FROM `rechnungen` WHERE Kategorie =\'Reparaturen\'');
-$oel = ('SELECT Kategorie, SUM(Betrag) FROM `rechnungen` WHERE Kategorie =\'Oel\'');
-$strom = ('SELECT Kategorie, SUM(Betrag) FROM `rechnungen` WHERE Kategorie =\'Strom\'');
-$hauswart = ('SELECT Kategorie, SUM(Betrag) FROM `rechnungen` WHERE Kategorie =\'Hauswart\'');
+$wasser = ("SELECT Kategorie, SUM(Betrag) AS Kosten
+            FROM Rechnungen
+            GROUP BY Kategorie
+            ");
+$total = ("SELECT SUM(Betrag) AS Totalnebenkosten
+            FROM Rechnungen
+            " );
 //First table: put all columns automatically
 $pdf->Table($wasser);
-$pdf->Table($oel);
-$pdf->Table($reparaturen);
-$pdf->Table($hauswart);
-$pdf->Table($strom);
+$pdf->Table($total);
 
 //$pdf->AddPage();
 //Second table: specify 3 columns

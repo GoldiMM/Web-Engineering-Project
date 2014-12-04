@@ -1,6 +1,15 @@
 <?php
     session_start();
     include('authorization.inc.php');
+    //local Variables 
+    $pagename = 'Nebenkostenabrechnung';
+    $tablename = 'Rechnungen';     
+    $gesamtflaeche = array();
+    $totalNebenkosten = 2;
+    $wohnungsflaeche = 2; 
+    $mieter_ID = 0;
+    
+
 ?>
 
 <html>
@@ -18,38 +27,45 @@
             include('homepage.nav.inc.php');
             include('aside_rechnungen.inc.php');
             //local variables
-            //$pagename = 'Rechnungsliste';
-            //$tablename = 'Rechnungen';       
-        ?>
+            
+     
 
-        <article id="ajax_article">  
+       echo'<article id="ajax_article">';  
+                //sql queries //Total Nebenkosten 
+    include ('db_Cando.inc.php');
+    $sql = "SELECT Kategorie, SUM(Betrag) AS Kosten
+            FROM Rechnungen
+            GROUP BY Kategorie
+            " ;
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+//        echo "Abfrage OK";
+        include ('display.join.inc');
+       // include ('display.inc.php');
+    }
+    else {
+    	echo "Keine Daten vorhanden";
+    }
+    
+    // SQL Query für Gesamtflaeche
+    $sql = "SELECT SUM(Betrag) AS Totalnebenkosten
+            FROM Rechnungen
+            " ;
+    $result = $conn->query($sql);     
+    if ($result->num_rows > 0) {
+//        echo "Abfrage OK";
+        include ('display.join.inc');
+        $row = $result->fetch_assoc();
+        $gesamtflaeche = $row["Quadratmeter"];
+    }
+    else {
+    	echo "Keine Daten vorhanden";
+    }  
+                //PDF [FB]
+                echo "<form name=\"pdf\" action=\"pdfjahresendabrech.php\" method=\"POST\">
+                        <input type=\"submit\"  value=\"PDF-Ausgabe\" > </form>    ";
 
-
-
-<?php   /*
-
-                    include_once 'confPDO.php';
-
-                    echo "<table class='table table-striped'>";
-                    echo "<tr><th>Rechnungs-Nr.</th><th>Rechnungstyp</th><th>Wohnungs-Nr.</th><th>Name</th><th>Vorname</th><th>Betrag</th></tr>";
-
-                    foreach ($dbh->query('SELECT * FROM Rechnungen, Mieter WHERE Rechnungen.Kategorie!="Öl" AND Mieter.Mieter_ID=Rechnungen.Mieter_ID ORDER BY Rechnungs_ID ASC') as $row) {                    
-
-                    print_r("<tr><td>".$row['Rechnungsnummer']."</td><td>".$row['Rechnungstyp'].
-                            "</td><td>".$row['Wohnungsnummer']."</td><td>".$row['Name'].
-                            "</td><td>".$row['Vorname']."</td><td>".$row['Betrag']."</td></tr>");
-                    }    
-
-                    $sth = ($dbh->query('SELECT Kategorie, SUM(Betrag) FROM `rechnungen` WHERE Kategorie =\'Oel\''));
-                    $gesamt = $sth->fetchColumn();
-                    print_r("<tr><td><b>Total</b></td><td></td><td></td><td></td><td></td><td><b>".$gesamt."</b></td></tr>");
-
-                    echo "</table>";
-                    echo "</div>";
-
-                    unset($dbh);
-
-                */    
+                   
 
             include('homepage.footer.inc.php'); 
         ?>
