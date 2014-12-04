@@ -6,7 +6,7 @@
 	$tablename 		= 'Mieter';
 	$pagename 		= 'Mieterspiegel';
 
-	$sql = "SELECT   Anrede,  Vorname, Nachname, Zimmer, Stockwerk, Wohnungen.Wohnungs_ID,  Bezahlte_Miete, Miete  FROM Mietvertraege, Mieter, Wohnungen
+	$sql = "SELECT   Anrede,  Vorname, Nachname, Zimmer, Stockwerk, Wohnungen.Wohnungs_ID,  Bezahlte_Miete, Miete, Mietbeginn  FROM Mietvertraege, Mieter, Wohnungen
             WHERE Mietvertraege.Mieter_ID = Mieter.Mieter_ID   
             AND    Mietvertraege.Wohnungs_ID = Wohnungen.Wohnungs_ID
             ORDER BY Vertrags_ID DESC" ;
