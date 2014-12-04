@@ -13,13 +13,14 @@
                 </tr>
                 <tr> 
                     <td>
+                        <button type="button" onclick="load('ajax_article', 'edit_vertraege.inc.php');"> Vertrag bearbeiten / entfernen</button> 
+                    </td>
+                </tr>      
+                <tr> 
+                    <td>
                         <button type="button" onclick="load('ajax_article', 'book_vertraege.inc.php');"> Mieteingang buchen   </button>
                     </td>
                 </tr>  
-                <tr> 
-                    <td>
-                        <button type="button" onclick="load('ajax_article', 'edit_vertraege.inc.php');"> Vertrag bearbeiten / entfernen</button> 
-                    </td>
-                </tr>               
+                         
             </table>
         </aside>

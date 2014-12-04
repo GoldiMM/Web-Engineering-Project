@@ -13,9 +13,13 @@
         
         </script>
         
-        <!-- second Datepicker -->
+        <!--  Datepicker for use with dynamic $id in several copies:  -->
         <script>
-        
+         $(function() {
+            $( "#datepicker1" ).datepicker({ minDate: 0, maxDate: "+12M" });
+            //$("#datepicker2" ).datepicker("option", "dateFormat", "dd.mm.yy");
+          });
+
           $(function() {
             $( "#datepicker2" ).datepicker({  minDate: "-12M", maxDate: "+12M"  });
             //$("#datepicker2" ).datepicker("option", "dateFormat", "dd.mm.yy");
@@ -24,10 +28,14 @@
         $(function() {
             $( "#datepicker3" ).datepicker({ minDate: "-12M" });
             //$("#datepicker2" ).datepicker("option", "dateFormat", "dd.mm.yy");
-          });
-        
+          }); 
+
         $(function() {
-            $( "#datepicker4" ).datepicker({ minDate: 0, maxDate: "+12M" });
+            $( "#datepicker4" ).datepicker({ minDate: "-12M" });
             //$("#datepicker2" ).datepicker("option", "dateFormat", "dd.mm.yy");
-          });
+          }); 
+        $(function() {
+            $( "#datepicker5" ).datepicker({ minDate: "-12M" });
+            //$("#datepicker2" ).datepicker("option", "dateFormat", "dd.mm.yy");
+          }); 
         </script>
