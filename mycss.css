@@ -1,6 +1,7 @@
 /* HTML-Tags */
 html{ 
         background-color: #82BB5D;
+        width:100%;
 }
 
 body{
@@ -44,9 +45,9 @@ article {
     margin-right:2pt;
     border-radius:25px;
     padding-left:15pt;
-    padding-right:15pt;
     background-color: #B3E095; 
     text-align:left;
+    width:100%;
 }
 
 section {
@@ -54,7 +55,7 @@ section {
 }
 
 footer {
-    font-size: 8pt;
+    font-size: 10pt;
     text-align: right;
     margin-right:2pt;
 } 
@@ -77,6 +78,7 @@ button {
 
 table{
     border-spacing: 3pt;
+    
 }
      
 table th {

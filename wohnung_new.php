@@ -28,6 +28,14 @@
                 //Form for generic tuple creation new.inc.php
                 include('new.inc.php');
 
+                         //      <!-- START Validation [MM] -->
+            
+            $validation = false;
+            if (isset($_POST['submit'])) {
+            include ('validation_Wohnung.php');
+            }
+            
+            //<!-- END Validation [MM] -->
                 
                 if ($validation == true) {
                 if (isset($_POST['submit'])){

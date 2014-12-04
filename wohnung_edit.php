@@ -18,7 +18,7 @@
 	        include('homepage.nav.inc.php');
 	        include('aside_wohnungen.inc.php');
 
-	        //UNIQUE CODE Mieter bearbeiten
+	        //UNIQUE CODE Wohnung bearbeiten
 			// local variables to create edit table: 
 			$id=$_GET['id'];
 			$tablename = 'Wohnungen';

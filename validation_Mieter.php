@@ -13,30 +13,27 @@ if (empty($_POST['feld2'] == true) OR empty($_POST['feld3'] == true) OR empty($_
     echo "<p><font color=\"red\"> $err  </font> </p>";
 }
 
-//echo $_POST['feld1'];  // Testausgabe um zu zeigen, dass Anrede bei 'feld1' beginnt und nicht bei 'feld0'!!!
-
-if (!preg_match("/^[a-zA-Z -]+$/", $_POST['feld2'])) {
+if (!preg_match("/^[a-zA-Z -]+$/", trim($_POST['feld2']))) {
     $vornameErr = "Bitte Vorname korrekt ausf&uuml;llen!";
     $validation = false;
     echo "<p><font color=\"red\"> $vornameErr  </font> </p>";
 }
 
-if (!preg_match("/^[a-zA-Z -]+$/", $_POST['feld3'])) {
+if (!preg_match("/^[a-zA-Z -]+$/", trim($_POST['feld3']))) {
     $nachnameErr = "Bitte Nachname korrekt ausf&uuml;llen!";
     $validation = false;
     echo "<p><font color=\"red\"> $nachnameErr  </font> </p>";
 }
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if (!filter_var(trim($email), FILTER_VALIDATE_EMAIL)) {
     $emailErr = "Das ist keine g&uuml;ltige E-Mail-Adresse!";
     $validation = false;
     echo "<p><font color=\"red\"> $emailErr  </font> </p>";
 }
 
-if (!is_numeric($telefon)) {
+if (!is_numeric(trim($telefon))) {
     $telefonErr = "Bitte Telefonnummer korrekt ausf&uuml;llen!";
     $validation = false;
     echo "<p><font color=\"red\"> $telefonErr  </font> </p>";
 }
 ?>
-

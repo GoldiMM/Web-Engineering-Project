@@ -32,7 +32,7 @@
 
                     //__variable SQL statment__
                     $sql = "INSERT INTO $tablename (Benutzername, Passwort)
-                            VALUES ('$_POST[feld1]','$_POST[feld2]')";
+                            VALUES ('$_POST[feld1]','$_POST[feld2]'";
 
                     //__Processing Statement__
                     $result = $conn->query($sql);
