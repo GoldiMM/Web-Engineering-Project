@@ -3,9 +3,8 @@
     include('authorization.inc.php');
     //local Variables 
     $pagename = '';
-    //$tablename = 'Rechnungen';     
-    //$gesamtflaeche = 0;
-    //$totalNebenkosten = 0;
+    $form_action = 'mieter_jahresabrechnung.php';
+    
 ?>
 
 <html>
@@ -42,6 +41,7 @@
         // Rundet Float auf zwei Kommastellen : 
         $beitragProQmFLOAT = $totalNebenkosten / $gesamtflaeche;
         $beitragProQm = number_format($beitragProQmFLOAT, 2); 
+        $akontoProQm = 70;
 
         echo'<article id="ajax_article">';  
             echo'<h3> Jahresabrechnung 2014 </h3>';
@@ -83,12 +83,13 @@
                     ORDER BY Quadratmeter DESC" ;
             
             $result = $conn->query($sqlQM);
-            if ($result->num_rows > 0) {                 
-                //__display__
-                echo "<h2>".$pagename."</h2>";
-                    echo '<table width="60% border="2" cellspacing="0.5pt" cellpadding="0.5 pt" class="t">';
-
-
+            if ($result->num_rows > 0) {   
+            ?>              
+                <!--__display__ -->
+                <h2> <?php echo $pagename ?></h2>
+                    <table width="60%" border="2" cellspacing="0.5pt" cellpadding="0.5 pt" class="t">
+                        <form action="<?php echo $form_action?>" method="POST" >
+                        <?php
                         // Headers - dynamisch ausgeben 
                         $fields = mysqli_fetch_fields($result);
                         $headers = array();
@@ -96,8 +97,11 @@
                             $headers[] = $field->name;
                             echo "<th>". $field->name . "</th>\n";
                         }
-                        echo "<th> Beitrag pro Mieter </th>\n";
-                        echo "</tr>\n";
+                        echo "<th> Anteil pro Mieter </th>\n";
+                        echo "<th> Akontozahlung pro Mieter </th>\n";
+                        echo "<th> Ausstehender Betrag pro Mieter </th>\n";
+                        
+                        //echo "</tr>\n";
                         // Row - dynamisch ausgeben 
                         if ($result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
@@ -105,15 +109,18 @@
                                     for ($i=0; $i<sizeof($headers); $i++){
                                         echo  "<td>". $row["$headers[$i]"]."</td>";
                                     }    
-                                    echo   "<td>". ($row['Quadratmeter'] * $beitragProQm ). " CHF </td>";              
-                                echo "</tr>";      
-                            }
-                        } 
+                                    echo   "<td>". ($row['Quadratmeter'] * $beitragProQm ). " CHF </td>";    
+                                    echo   "<td>". ($row['Quadratmeter'] * $akontoProQm ). " CHF </td>";
+                                    echo   "<td>". ( ($row['Quadratmeter'] * $beitragProQm ) - ($row['Quadratmeter'] * $akontoProQm ) ). " CHF </td>";                         
+                                }            
+                        }   
                         else {
                                 echo "Keine Daten vorhanden";
                         }
                     echo"<br>";
+                    echo '</form>';
                     echo "</table>";
+                     echo'</article >';  
                 echo "</br>";
             }
             else {

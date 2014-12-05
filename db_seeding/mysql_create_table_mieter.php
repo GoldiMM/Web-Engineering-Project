@@ -1,5 +1,5 @@
 <?php
-
+/*
 $db_host = "localhost";
 $db_username = "Cando";
 $db_pass = "yes123";
@@ -12,6 +12,19 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+*/
+
+	$db_host = "mysql.hostinger.de";
+	$db_username = "u947198430_user";
+	$db_pass = "yes123";
+    $dbname = "u947198430_db";
+
+	// Create connection
+	$conn = new mysqli($db_host, $db_username, $db_pass, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	}
 
 // sql to create table
 $sql = "CREATE TABLE IF NOT EXISTS Mieter (
@@ -20,8 +33,7 @@ $sql = "CREATE TABLE IF NOT EXISTS Mieter (
 	Vorname VARCHAR(30) NOT NULL,
 	Nachname VARCHAR(30) NOT NULL,
 	Email VARCHAR(30),
-	Telefon VARCHAR(30),
-        Nebenkostenbeitrag INT(10)
+	Telefon VARCHAR(30)
 )";
 
 

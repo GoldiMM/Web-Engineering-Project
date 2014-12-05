@@ -1,4 +1,5 @@
 <?php
+
 	$db_host = "mysql.hostinger.de";
 	$db_username = "u947198430_user";
 	$db_pass = "yes123";

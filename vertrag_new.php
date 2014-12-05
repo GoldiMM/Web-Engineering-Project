@@ -1,6 +1,7 @@
 <?php
     session_start();
     include('authorization.inc.php');
+    include('db_Cando.inc.php');
 
     //__variables__
     $pagename = 'Vertragsliste';

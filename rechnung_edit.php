@@ -57,7 +57,7 @@
 					 		for ($id=0; $id<1; $id++){ 
 							?>
 							   	<td> 
-									<input name="feld<?php echo $id;?>" type="text" style="background:grey; color:black;" value= "<?php echo $row["$headers[$id]"]; ?> " size="20" readonly>
+									<input name="feld<?php echo $id;?>" type="text" value= "<?php echo $row["$headers[$id]"]; ?> " size="20" readonly>
 								</td>
 								<?php
 							}//end of readonly for ID Field

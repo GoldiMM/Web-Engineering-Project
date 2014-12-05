@@ -64,10 +64,10 @@
 							</td>
 							<?php
 						 	}
-						if($i==2 || $i== 3){//datepicker for dates TODO - enter datepicker logic Change submit fields - date 1 !
+						else if ($i==3 || $i== 4){//datepicker for dates TODO - enter datepicker logic Change submit fields - date 1 !
 							?>
 							<td> 
-								<input type="text" id="datepicker<?php echo $i;?>" name="feld<?php echo $i;?>" style="background:green; color:black;" value= "<?php echo $row["$headers[$i]"]; ?> " size="20">
+								<input type="text" id="datepicker<?php echo $i;?>" name="feld<?php echo $i;?>"  value= "<?php echo $row["$headers[$i]"]; ?> " size="20">
 							</td>
 							<?php
 
