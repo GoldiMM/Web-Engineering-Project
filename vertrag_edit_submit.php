@@ -18,8 +18,7 @@
 	        include('homepage.nav.inc.php');
 	        include('aside_vertraege.inc.php');
 	
-                echo "<article id=\"ajax_article\">";
-                
+                echo "<article id=\"ajax_article\">";              
             //START Validation [MM] -->
             include ('validation_Vertrag.php');
             //END Validation [MM]

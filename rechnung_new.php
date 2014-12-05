@@ -68,7 +68,19 @@
                 <input type="submit" name="submit" value="Daten erfassen">
             </form>
 
+            
+                        <!-- START Validation [MM] -->
             <?php
+            $validation = false;
+            if (isset($_POST['submit'])) {
+            include ('validation_Rechnung.php');
+            }
+            ?>
+            <!-- END Validation [MM] -->
+            
+            
+            <?php
+            if ($validation == true) {
                 //____________________________data transmission to DB ______________
                 if (isset($_POST['submit'])){
                     $sql = "INSERT INTO Rechnungen (Betrag, Rechnungsdatum, Kategorie, Lieferant)
@@ -76,6 +88,7 @@
                     $conn->multi_query($sql);
                     echo ("<h3> Neuer Datensatz erfasst ".$_POST['feld1'].".- CHF in Rg. Kategorie ".$_POST['feld3']." Lieferant: ".$_POST['feld4']." </h3>");    
                 } //end of isset
+            }
             // Ausgabe der Liste
             include ('display.inc.php');
 
