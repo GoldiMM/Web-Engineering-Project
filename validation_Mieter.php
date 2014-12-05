@@ -7,7 +7,7 @@ $email = $_POST["feld4"]; //email
 $telefon = $_POST["feld5"]; // telefon
 
 
-if (empty($_POST['feld2'] == true) OR empty($_POST['feld3'] == true) OR empty($_POST['feld4'] == true) OR empty($_POST['feld5'] == true)) {
+if (empty($_POST["feld2"]) || empty($_POST["feld3"]) || empty($_POST["feld4"]) || empty($_POST["feld5"])) {
     $err = "Bitte alle Felder ausf&uuml;llen!";
     $validation = false;
     echo "<p><font color=\"red\"> $err  </font> </p>";

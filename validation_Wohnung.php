@@ -9,8 +9,8 @@ $quadratmeter = $_POST["feld5"];
 $zimmer = $_POST["feld6"]; 
 
 
-if (empty($_POST['feld1'] == true) OR empty($_POST['feld2'] == true) OR empty($_POST['feld3'] == true) OR empty($_POST['feld4'] == true)
-        OR empty($_POST['feld5'] == true) OR empty($_POST['feld6'] == true)) {
+if (empty($_POST['feld1']) || empty($_POST['feld2']) || empty($_POST['feld3']) || empty($_POST['feld4'])
+        || empty($_POST['feld5']) || empty($_POST['feld6'])) {
     $err = "Bitte alle Felder ausf&uuml;llen!";
     $validation = false;
     echo "<p><font color=\"red\"> $err  </font> </p>";

@@ -3,7 +3,7 @@
             <table border="4" cellspacing="5pt" cellpadding="2pt" bgcolor="blue" class="navbar2">
                 <tr> 
                     <td>
-                        <a href="vertraege.php"><button type="button"> &Uuml;bersicht der Vertraege</button></a>
+                        <a href="vertraege.php"><button type="button"> &Uuml;bersicht der Vertr&auml;ge</button></a>
                     </td>
                 </tr>
                 <tr> 
