@@ -4,7 +4,7 @@ $validation = true;
 $miete = $_POST["feld1"]; 
 $mietbeginn = $_POST['datum1']; // $_POST['datum1'];
 
-if (empty(trim($_POST['feld1'])) || empty(trim($_POST['datum1'])) ) {
+if (empty($_POST['feld1']) || empty($_POST['datum1']) ) {
     $err = "Bitte alle Felder ausf&uuml;llen!";
     $validation = false;
     echo "<p><font color=\"red\"> $err  </font> </p>";
