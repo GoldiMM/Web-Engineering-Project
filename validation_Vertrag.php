@@ -20,7 +20,7 @@ if (!is_numeric(trim($miete))) {
 //Mietbeginn
 //$date_original = '/^(19|20)\d\d[\-\/.](0[1-9]|1[012])[\-\/.](0[1-9]|[12][0-9]|3[01])$/';
 //$hiredate = '2013-14-04';
-$date_soll = '/^(19|20)\d\d[\/](0[1-9]|1[012])[\/](0[1-9]|[12][0-9]|3[01])$/';
+$date_soll = '/^(19|20)\d\d[\-\/.](0[1-9]|1[012])[\-\/.](0[1-9]|[12][0-9]|3[01])$/';
 
 if (!preg_match($date_soll, trim($mietbeginn))) {
     $mietbeginnErr = "Bitte Datum vom Mietbeginn korrekt angeben!";
