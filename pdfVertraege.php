@@ -7,7 +7,7 @@ function Header()
 {
 	//Title
 	$this->SetFont('Arial','',18);
-	$this->Cell(0,6,'Rechnungsuebersicht',0,1,'C');
+	$this->Cell(0,6,'Vertragsuebersicht',0,1,'C');
 	$this->Ln(10);
 	//Ensure table header is output
 	parent::Header();
