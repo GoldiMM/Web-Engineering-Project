@@ -48,7 +48,7 @@
             $tablename = 'Rechnungen';              
         ?>
 
-        <article id="ajax_article">  <!--   UNIQUE CODE  because of foreign keys drop-down lists -->
+        <article id="ajax_article" class="article">  <!--   UNIQUE CODE  because of foreign keys drop-down lists -->
             <h1>Rechnung erfassen</h1>
                 <form action="<?php echo $form_action?>" method="POST">
                     <fieldset>

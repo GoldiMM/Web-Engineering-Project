@@ -22,7 +22,7 @@
             $tablename = 'Rechnungen';       
         ?>
 
-        <article id="ajax_article">         
+        <article id="ajax_article" class="article">         
             <?php 
                 include ('display.inc.php');
                 //PDF [FB]

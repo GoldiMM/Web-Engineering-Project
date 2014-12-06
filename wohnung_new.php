@@ -23,7 +23,7 @@
             $form_action = 'wohnung_new.php';
         ?>
 
-        <article id="ajax_article"> 
+        <article id="ajax_article" class="article"> 
             <?php  
                 //Form for generic tuple creation new.inc.php
                 include('new.inc.php');

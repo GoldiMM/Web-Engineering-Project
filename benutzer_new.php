@@ -24,7 +24,7 @@
         ?>
 
         <!--  etc -->
-        <article id="ajax_article"> 
+        <article id="ajax_article" class="article"> 
             <?php
                 //Form for generic tuple creation new.inc.php
                 include('new.inc.php');

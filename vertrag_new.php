@@ -60,7 +60,7 @@
             include('aside_vertraege.inc.php');           
         ?>
 
-        <article id="ajax_article">  <!--   UNIQUE CODE  because of foreign keys drop-down lists  TODO second date into DB -->
+        <article id="ajax_article" class="article">  <!--   UNIQUE CODE  because of foreign keys drop-down lists  TODO second date into DB -->
             <h1>Mietvertrag erfassen</h1>
                 <form action="<?php echo $form_action?>" method="POST">
                     <fieldset>

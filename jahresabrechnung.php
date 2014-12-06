@@ -43,7 +43,7 @@
         $beitragProQm = number_format($beitragProQmFLOAT, 2); 
         $akontoProQm = 70;
 
-        echo'<article id="ajax_article">';  
+        echo'<article id="ajax_article" class="article">';  
             echo'<h3> Jahresabrechnung 2014 </h3>';
             
             // SQL Query Ausgabe Kosten Pro Kategorie

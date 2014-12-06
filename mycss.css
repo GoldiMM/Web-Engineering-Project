@@ -38,16 +38,16 @@ nav {
     float:left;
 }
 
-article {
+.article {
     border:3pt solid #1D4B00 ;
     font-size: 12pt;
     margin-left:25%;
-    margin-right:2pt;
+    margin-right:1pt;
     border-radius:25px;
     padding-left:15pt;
+    padding-right:15pt;
     background-color: #B3E095; 
     text-align:left;
-    width:100%;
 }
 
 section {

@@ -2,7 +2,7 @@
 //sofern der Benutzer eingeloggt ist
 if ($_SESSION['eingeloggt'] == true) {
 echo "
-<article>
+<article class=\"article\">
     <p align=\"left\"> 
         Hallo <b> $_SESSION[benutzername] </b> <br/> 
         Herzlich Willkommen auf Deinem eigenen Online-Verwaltungstool f&uuml;r Mehrfamilienh&auml;user. <br/>

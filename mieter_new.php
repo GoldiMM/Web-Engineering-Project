@@ -22,7 +22,7 @@
         ?>
 
         <!-- UNIQUE CODE Mieter erfassen former new_mieter.article.. etc -->
-        <article id="ajax_article"> 
+        <article id="ajax_article" class="article"> 
             <body>
             <h1>Mieter erfassen</h1>
                 <form action="<?php echo $form_action?>" method="POST">

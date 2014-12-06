@@ -53,7 +53,7 @@
             <nav> &nbsp; </nav>
             
             <aside> &nbsp; </aside>
-            <article>
+            <article class="article">
             	<h1>  Unauthorisierter Zugriff -> <a href='index.php'> bitte einloggen   </a><h1>
            	</article>
             

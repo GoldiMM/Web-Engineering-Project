@@ -53,7 +53,7 @@
             <nav> &nbsp; </nav>
             
             <aside> &nbsp; </aside>
-            <article>
+            <article class="article">
             	<h1>  "Sie wurden ausgeloggt -> <a href='index.php'> erneut einloggen   </a><h1>
            	</article>
             

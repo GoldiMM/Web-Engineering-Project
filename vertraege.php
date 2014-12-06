@@ -23,7 +23,7 @@
             $tablename = 'Mietvertraege';       
         ?>
 
-        <article id="ajax_article">         
+        <article id="ajax_article" class="article">         
             <?php 
                  //__display of contracts__   
                 $pagename       = 'Vorhandene Vertr&auml;ge';
